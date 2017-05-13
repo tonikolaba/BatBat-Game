@@ -6,7 +6,7 @@ import java.util.ArrayList;
 
 import javax.imageio.ImageIO;
 
-import al.artofsoul.Entity.Enemies.DarkEnergy;
+import al.artofsoul.Entity.Enemies.RedEnergy;
 import al.artofsoul.TileMap.TileMap;
 
 /**
@@ -38,7 +38,7 @@ public class Spirit extends Enemy {
 	// after half hp, create shield
 	// after quarter hp, bullet hell
 	
-	private DarkEnergy[] shield;
+	private RedEnergy[] shield;
 	private double ticks;
 	
 	public Spirit(TileMap tm, Player p, ArrayList<Enemy> enemies, ArrayList<Explosion> explosions) {
@@ -59,7 +59,7 @@ public class Spirit extends Enemy {
 		
 		try {
 			BufferedImage spritesheet = ImageIO.read(
-					getClass().getResourceAsStream("/Sprites/Enemies/Spirit.gif")
+					getClass().getResourceAsStream("/Sprites/Enemies/Spirit2.gif")
 			);
 			sprites = new BufferedImage[4];
 			for(int i = 0; i < sprites.length; i++) {
@@ -75,7 +75,7 @@ public class Spirit extends Enemy {
 		animation.setFrames(sprites);
 		animation.setDelay(1);
 		
-		shield = new DarkEnergy[2];
+		shield = new RedEnergy[2];
 		
 		step = 0;
 		stepCount = 0;
@@ -112,12 +112,12 @@ public class Spirit extends Enemy {
 		////////////
 		if(health <= maxHealth / 2) {
 			if(shield[0] == null) {
-				shield[0] = new DarkEnergy(tileMap);
+				shield[0] = new RedEnergy(tileMap);
 				shield[0].setPermanent(true);
 				enemies.add(shield[0]);
 			}
 			if(shield[1] == null) {
-				shield[1] = new DarkEnergy(tileMap);
+				shield[1] = new RedEnergy(tileMap);
 				shield[0].setPermanent(true);
 				enemies.add(shield[1]);
 			}
@@ -146,10 +146,10 @@ public class Spirit extends Enemy {
 				explosions.add(new Explosion(tileMap, (int)x, (int)y));
 			}
 			if(stepCount >= 90 && stepCount % 30 == 0) {
-				DarkEnergy de = new DarkEnergy(tileMap);
+				RedEnergy de = new RedEnergy(tileMap);
 				de.setPosition(x, y);
 				de.setVector(3 * Math.sin(stepCount / 32), 3 * Math.cos(stepCount / 32));
-				de.setType(DarkEnergy.BOUNCE);
+				de.setType(RedEnergy.BOUNCE);
 				enemies.add(de);
 			}
 			return;
@@ -179,8 +179,8 @@ public class Spirit extends Enemy {
 				}
 			}
 			if(stepCount % 60 == 0) {
-				DarkEnergy de = new DarkEnergy(tileMap);
-				de.setType(DarkEnergy.GRAVITY);
+				RedEnergy de = new RedEnergy(tileMap);
+				de.setType(RedEnergy.GRAVITY);
 				de.setPosition(x, y);
 				int dir = Math.random() < 0.5 ? 1 : -1;
 				de.setVector(dir, 0);
@@ -235,11 +235,11 @@ public class Spirit extends Enemy {
 				dy = 0;
 			}
 			if(stepCount > 60 && stepCount < 120 && stepCount % 5 == 0 && dy == 0) {
-				DarkEnergy de = new DarkEnergy(tileMap);
+				RedEnergy de = new RedEnergy(tileMap);
 				de.setPosition(x, y);
 				de.setVector(-3, 0);
 				enemies.add(de);
-				de = new DarkEnergy(tileMap);
+				de = new RedEnergy(tileMap);
 				de.setPosition(x, y);
 				de.setVector(3, 0);
 				enemies.add(de);

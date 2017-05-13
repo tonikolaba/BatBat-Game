@@ -14,12 +14,12 @@ import javax.imageio.ImageIO;
 public class Content {
 	
 	public static BufferedImage[][] EnergyParticle = load("/Sprites/Player/EnergyParticle.gif", 5, 5);
-	public static BufferedImage[][] Explosion = load("/Sprites/Enemies/Explosion.gif", 30, 30);
+	public static BufferedImage[][] Explosion = load("/Sprites/Enemies/ExplosionRed.gif", 30, 30);
 	
-	public static BufferedImage[][] Gazer = load("/Sprites/Enemies/Gazer.gif", 39, 20);
-	public static BufferedImage[][] Tengu = load("/Sprites/Enemies/Tengu.gif", 30, 30);
-	public static BufferedImage[][] GelPop = load("/Sprites/Enemies/GelPop.gif", 25, 25);
-	public static BufferedImage[][] DarkEnergy = load("/Sprites/Enemies/DarkEnergy.gif", 20, 20);
+	public static BufferedImage[][] Zogu = load("/Sprites/Enemies/Zogu.gif", 39, 20);
+	public static BufferedImage[][] Ufo = load("/Sprites/Enemies/Ufo.gif", 30, 30);
+	public static BufferedImage[][] XhelBat = load("/Sprites/Enemies/XhelBat.gif", 25, 25);
+	public static BufferedImage[][] RedEnergy = load("/Sprites/Enemies/RedEnergy.gif", 20, 20);
 	
 	public static BufferedImage[][] load(String s, int w, int h) {
 		BufferedImage[][] ret;

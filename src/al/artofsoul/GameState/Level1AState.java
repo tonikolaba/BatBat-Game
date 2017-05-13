@@ -1,8 +1,8 @@
 package al.artofsoul.GameState;
 
 import al.artofsoul.Audio.JukeBox;
-import al.artofsoul.Entity.Enemies.Gazer;
-import al.artofsoul.Entity.Enemies.GelPop;
+import al.artofsoul.Entity.Enemies.Zogu;
+import al.artofsoul.Entity.Enemies.XhelBat;
 import al.artofsoul.Entity.*;
 import al.artofsoul.Handlers.Keys;
 import al.artofsoul.Main.GamePanel;
@@ -97,7 +97,7 @@ public class Level1AState extends GameState {
 		// title and subtitle
 		try {
 			angelspop = ImageIO.read(
-				getClass().getResourceAsStream("/HUD/angelspop.gif")
+				getClass().getResourceAsStream("/HUD/angelspop1.gif")
 			);
 			title = new Title(angelspop.getSubimage(0, 0, 178, 19));
 			title.sety(60);
@@ -122,61 +122,61 @@ public class Level1AState extends GameState {
 		JukeBox.load("/SFX/explode.mp3", "explode");
 		JukeBox.load("/SFX/enemyhit.mp3", "enemyhit");
 		
-		// music
+/*		// music
 		JukeBox.load("/Music/level1.mp3", "level1");
-		JukeBox.loop("level1", 600, JukeBox.getFrames("level1") - 2200);
+		JukeBox.loop("level1", 600, JukeBox.getFrames("level1") - 2200);*/
 		
 	}
 	
 	private void populateEnemies() {
 		enemies.clear();
-		/*Tengu t = new Tengu(tileMap, player, enemies);
+		/*Ufo t = new Ufo(tileMap, player, enemies);
 		t.setPosition(1300, 100);
 		enemies.add(t);
-		t = new Tengu(tileMap, player, enemies);
+		t = new Ufo(tileMap, player, enemies);
 		t.setPosition(1330, 100);
 		enemies.add(t);
-		t = new Tengu(tileMap, player, enemies);
+		t = new Ufo(tileMap, player, enemies);
 		t.setPosition(1360, 100);
 		enemies.add(t);*/
-		GelPop gp;
-		Gazer g;
+		XhelBat gp;
+		Zogu g;
 		
-		gp = new GelPop(tileMap, player);
+		gp = new XhelBat(tileMap, player);
 		gp.setPosition(1300, 100);
 		enemies.add(gp);
-		gp = new GelPop(tileMap, player);
+		gp = new XhelBat(tileMap, player);
 		gp.setPosition(1320, 100);
 		enemies.add(gp);
-		gp = new GelPop(tileMap, player);
+		gp = new XhelBat(tileMap, player);
 		gp.setPosition(1340, 100);
 		enemies.add(gp);
-		gp = new GelPop(tileMap, player);
+		gp = new XhelBat(tileMap, player);
 		gp.setPosition(1660, 100);
 		enemies.add(gp);
-		gp = new GelPop(tileMap, player);
+		gp = new XhelBat(tileMap, player);
 		gp.setPosition(1680, 100);
 		enemies.add(gp);
-		gp = new GelPop(tileMap, player);
+		gp = new XhelBat(tileMap, player);
 		gp.setPosition(1700, 100);
 		enemies.add(gp);
-		gp = new GelPop(tileMap, player);
+		gp = new XhelBat(tileMap, player);
 		gp.setPosition(2177, 100);
 		enemies.add(gp);
-		gp = new GelPop(tileMap, player);
+		gp = new XhelBat(tileMap, player);
 		gp.setPosition(2960, 100);
 		enemies.add(gp);
-		gp = new GelPop(tileMap, player);
+		gp = new XhelBat(tileMap, player);
 		gp.setPosition(2980, 100);
 		enemies.add(gp);
-		gp = new GelPop(tileMap, player);
+		gp = new XhelBat(tileMap, player);
 		gp.setPosition(3000, 100);
 		enemies.add(gp);
 		
-		g = new Gazer(tileMap);
+		g = new Zogu(tileMap);
 		g.setPosition(2600, 100);
 		enemies.add(g);
-		g = new Gazer(tileMap);
+		g = new Zogu(tileMap);
 		g.setPosition(3500, 100);
 		enemies.add(g);
 	}

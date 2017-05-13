@@ -1,9 +1,9 @@
 package al.artofsoul.GameState;
 
 import al.artofsoul.Audio.JukeBox;
-import al.artofsoul.Entity.Enemies.Gazer;
-import al.artofsoul.Entity.Enemies.GelPop;
-import al.artofsoul.Entity.Enemies.Tengu;
+import al.artofsoul.Entity.Enemies.Zogu;
+import al.artofsoul.Entity.Enemies.XhelBat;
+import al.artofsoul.Entity.Enemies.Ufo;
 import al.artofsoul.Entity.*;
 import al.artofsoul.Handlers.Keys;
 import al.artofsoul.Main.GamePanel;
@@ -54,7 +54,7 @@ public class Level1BState extends GameState {
 	public void init() {
 		
 		// backgrounds
-        temple = new Background("/Backgrounds/temple1.gif", 0.5, 0);
+        temple = new Background("/Backgrounds/temple4.gif", 0.5, 0);
 
         // tilemap
 		tileMap = new TileMap(30);
@@ -122,58 +122,58 @@ public class Level1BState extends GameState {
 	
 	private void populateEnemies() {
 		enemies.clear();
-		GelPop gp;
-		Gazer g;
-		Tengu t;
+		XhelBat gp;
+		Zogu g;
+		Ufo t;
 		
-		gp = new GelPop(tileMap, player);
+		gp = new XhelBat(tileMap, player);
 		gp.setPosition(750, 100);
 		enemies.add(gp);
-		gp = new GelPop(tileMap, player);
+		gp = new XhelBat(tileMap, player);
 		gp.setPosition(900, 150);
 		enemies.add(gp);
-		gp = new GelPop(tileMap, player);
+		gp = new XhelBat(tileMap, player);
 		gp.setPosition(1320, 250);
 		enemies.add(gp);
-		gp = new GelPop(tileMap, player);
+		gp = new XhelBat(tileMap, player);
 		gp.setPosition(1570, 160);
 		enemies.add(gp);
-		gp = new GelPop(tileMap, player);
+		gp = new XhelBat(tileMap, player);
 		gp.setPosition(1590, 160);
 		enemies.add(gp);
-		gp = new GelPop(tileMap, player);
+		gp = new XhelBat(tileMap, player);
 		gp.setPosition(2600, 370);
 		enemies.add(gp);
-		gp = new GelPop(tileMap, player);
+		gp = new XhelBat(tileMap, player);
 		gp.setPosition(2620, 370);
 		enemies.add(gp);
-		gp = new GelPop(tileMap, player);
+		gp = new XhelBat(tileMap, player);
 		gp.setPosition(2640, 370);
 		enemies.add(gp);
 		
-		g = new Gazer(tileMap);
+		g = new Zogu(tileMap);
 		g.setPosition(904, 130);
 		enemies.add(g);
-		g = new Gazer(tileMap);
+		g = new Zogu(tileMap);
 		g.setPosition(1080, 270);
 		enemies.add(g);
-		g = new Gazer(tileMap);
+		g = new Zogu(tileMap);
 		g.setPosition(1200, 270);
 		enemies.add(g);
-		g = new Gazer(tileMap);
+		g = new Zogu(tileMap);
 		g.setPosition(1704, 300);
 		enemies.add(g);
 		
-		t = new Tengu(tileMap, player, enemies);
+		t = new Ufo(tileMap, player, enemies);
 		t.setPosition(1900, 580);
 		enemies.add(t);
-		t = new Tengu(tileMap, player, enemies);
+		t = new Ufo(tileMap, player, enemies);
 		t.setPosition(2330, 550);
 		enemies.add(t);
-		t = new Tengu(tileMap, player, enemies);
+		t = new Ufo(tileMap, player, enemies);
 		t.setPosition(2400, 490);
 		enemies.add(t);
-		t = new Tengu(tileMap, player, enemies);
+		t = new Ufo(tileMap, player, enemies);
 		t.setPosition(2457, 430);
 		enemies.add(t);
 		

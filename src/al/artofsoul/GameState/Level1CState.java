@@ -1,12 +1,12 @@
 package al.artofsoul.GameState;
 
 import al.artofsoul.Audio.JukeBox;
-import al.artofsoul.Entity.Artfact.BottomLeftPiece;
-import al.artofsoul.Entity.Artfact.BottomRightPiece;
-import al.artofsoul.Entity.Artfact.TopLeftPiece;
-import al.artofsoul.Entity.Artfact.TopRightPiece;
-import al.artofsoul.Entity.Enemies.DarkEnergy;
+import al.artofsoul.Entity.Enemies.RedEnergy;
 import al.artofsoul.Entity.*;
+import al.artofsoul.Entity.BatBat.BottomLeftPiece;
+import al.artofsoul.Entity.BatBat.BottomRightPiece;
+import al.artofsoul.Entity.BatBat.TopLeftPiece;
+import al.artofsoul.Entity.BatBat.TopRightPiece;
 import al.artofsoul.Handlers.Keys;
 import al.artofsoul.Main.GamePanel;
 import al.artofsoul.TileMap.Background;
@@ -187,7 +187,7 @@ public class Level1CState extends GameState {
 		// update portal
 		portal.update();
 		
-		// update artfact
+		// update BATBAT
 		tlp.update();
 		trp.update();
 		blp.update();
@@ -387,9 +387,9 @@ public class Level1CState extends GameState {
 		if(eventCount == 360) {
 			flash = true;
 			spirit.setPosition(160, 160);
-			DarkEnergy de;
+			RedEnergy de;
 			for(int i = 0; i < 20; i++) {
-				de = new DarkEnergy(tileMap);
+				de = new RedEnergy(tileMap);
 				de.setPosition(160, 160);
 				de.setVector(Math.random() * 10 - 5, Math.random() * -2 - 3);
 				enemies.add(de);
