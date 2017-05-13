@@ -1,29 +1,19 @@
 package al.artofsoul.GameState;
 
-import java.awt.Graphics2D;
-import java.awt.Rectangle;
-import java.awt.image.BufferedImage;
-import java.util.ArrayList;
-
-import javax.imageio.ImageIO;
-
 import al.artofsoul.Audio.JukeBox;
-import al.artofsoul.Entity.Enemy;
-import al.artofsoul.Entity.EnemyProjectile;
-import al.artofsoul.Entity.EnergyParticle;
-import al.artofsoul.Entity.Explosion;
-import al.artofsoul.Entity.HUD;
-import al.artofsoul.Entity.Player;
-import al.artofsoul.Entity.PlayerSave;
-import al.artofsoul.Entity.Teleport;
-import al.artofsoul.Entity.Title;
 import al.artofsoul.Entity.Enemies.Gazer;
 import al.artofsoul.Entity.Enemies.GelPop;
 import al.artofsoul.Entity.Enemies.Tengu;
+import al.artofsoul.Entity.*;
 import al.artofsoul.Handlers.Keys;
 import al.artofsoul.Main.GamePanel;
 import al.artofsoul.TileMap.Background;
 import al.artofsoul.TileMap.TileMap;
+
+import javax.imageio.ImageIO;
+import java.awt.*;
+import java.awt.image.BufferedImage;
+import java.util.ArrayList;
 
 /**
  * @author ArtOfSoul
@@ -64,9 +54,9 @@ public class Level1BState extends GameState {
 	public void init() {
 		
 		// backgrounds
-		temple = new Background("/Backgrounds/temple.gif", 0.5, 0);
-		
-		// tilemap
+        temple = new Background("/Backgrounds/temple1.gif", 0.5, 0);
+
+        // tilemap
 		tileMap = new TileMap(30);
 		tileMap.loadTiles("/Tilesets/ruinstileset.gif");
 		tileMap.loadMap("/Maps/level1b.map");
@@ -123,8 +113,12 @@ public class Level1BState extends GameState {
 		JukeBox.load("/SFX/teleport.mp3", "teleport");
 		JukeBox.load("/SFX/explode.mp3", "explode");
 		JukeBox.load("/SFX/enemyhit.mp3", "enemyhit");
-		
-	}
+
+        // music
+        JukeBox.load("/Music/level1v2.mp3", "level2");
+        JukeBox.loop("level2", 600, JukeBox.getFrames("level2") - 2200);
+
+    }
 	
 	private void populateEnemies() {
 		enemies.clear();

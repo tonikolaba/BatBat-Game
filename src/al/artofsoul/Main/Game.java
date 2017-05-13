@@ -1,13 +1,6 @@
 package al.artofsoul.Main;
 
-import javax.swing.JFrame;
-
-import al.artofsoul.Main.GamePanel;
-
-/**
- * @author ArtOfSoul
- *
- */
+import javax.swing.*;
 
 public class Game {
 	

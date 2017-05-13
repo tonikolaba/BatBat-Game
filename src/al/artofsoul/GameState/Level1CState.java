@@ -1,27 +1,19 @@
 package al.artofsoul.GameState;
 
-import java.awt.Graphics2D;
-import java.awt.Rectangle;
-import java.util.ArrayList;
-
 import al.artofsoul.Audio.JukeBox;
-import al.artofsoul.Entity.Enemy;
-import al.artofsoul.Entity.EnergyParticle;
-import al.artofsoul.Entity.Explosion;
-import al.artofsoul.Entity.HUD;
-import al.artofsoul.Entity.Player;
-import al.artofsoul.Entity.PlayerSave;
-import al.artofsoul.Entity.Portal;
-import al.artofsoul.Entity.Spirit;
 import al.artofsoul.Entity.Artfact.BottomLeftPiece;
 import al.artofsoul.Entity.Artfact.BottomRightPiece;
 import al.artofsoul.Entity.Artfact.TopLeftPiece;
 import al.artofsoul.Entity.Artfact.TopRightPiece;
 import al.artofsoul.Entity.Enemies.DarkEnergy;
+import al.artofsoul.Entity.*;
 import al.artofsoul.Handlers.Keys;
 import al.artofsoul.Main.GamePanel;
 import al.artofsoul.TileMap.Background;
 import al.artofsoul.TileMap.TileMap;
+
+import java.awt.*;
+import java.util.ArrayList;
 
 /**
  * @author ArtOfSoul
@@ -102,9 +94,9 @@ public class Level1CState extends GameState {
 		// portal
 		portal = new Portal(tileMap);
 		portal.setPosition(160, 154);
-		
-		// artifact
-		tlp = new TopLeftPiece(tileMap);
+
+        // angelspop
+        tlp = new TopLeftPiece(tileMap);
 		trp = new TopRightPiece(tileMap);
 		blp = new BottomLeftPiece(tileMap);
 		brp = new BottomRightPiece(tileMap);
@@ -125,9 +117,9 @@ public class Level1CState extends GameState {
 		
 		// music
 		JukeBox.load("/Music/level1boss.mp3", "level1boss");
-		JukeBox.load("/Music/fanfare.mp3", "fanfare");
-		
-	}
+        //JukeBox.load("/Music/fanfare.mp3", "fanfare");
+
+    }
 	
 	private void populateEnemies() {
 		enemies.clear();
@@ -223,9 +215,9 @@ public class Level1CState extends GameState {
 		for(int i = 0; i < explosions.size(); i++) {
 			explosions.get(i).draw(g);
 		}
-		
-		// draw artifact
-		tlp.draw(g);
+
+        // draw angelspop
+        tlp.draw(g);
 		trp.draw(g);
 		blp.draw(g);
 		brp.draw(g);

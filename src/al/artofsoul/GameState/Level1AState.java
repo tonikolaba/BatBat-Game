@@ -1,28 +1,18 @@
 package al.artofsoul.GameState;
 
-import java.awt.Graphics2D;
-import java.awt.Rectangle;
-import java.awt.image.BufferedImage;
-import java.util.ArrayList;
-
-import javax.imageio.ImageIO;
-
 import al.artofsoul.Audio.JukeBox;
-import al.artofsoul.Entity.Enemy;
-import al.artofsoul.Entity.EnemyProjectile;
-import al.artofsoul.Entity.EnergyParticle;
-import al.artofsoul.Entity.Explosion;
-import al.artofsoul.Entity.HUD;
-import al.artofsoul.Entity.Player;
-import al.artofsoul.Entity.PlayerSave;
-import al.artofsoul.Entity.Teleport;
-import al.artofsoul.Entity.Title;
 import al.artofsoul.Entity.Enemies.Gazer;
 import al.artofsoul.Entity.Enemies.GelPop;
+import al.artofsoul.Entity.*;
 import al.artofsoul.Handlers.Keys;
 import al.artofsoul.Main.GamePanel;
 import al.artofsoul.TileMap.Background;
 import al.artofsoul.TileMap.TileMap;
+
+import javax.imageio.ImageIO;
+import java.awt.*;
+import java.awt.image.BufferedImage;
+import java.util.ArrayList;
 
 /**
  * @author ArtOfSoul
@@ -64,9 +54,9 @@ public class Level1AState extends GameState {
 	public void init() {
 		
 		// backgrounds
-		sky = new Background("/Backgrounds/sky.gif", 0);
-		clouds = new Background("/Backgrounds/clouds.gif", 0.1);
-		mountains = new Background("/Backgrounds/mali.gif", 0.2);
+        sky = new Background("/Backgrounds/qielli.gif", 0);
+        clouds = new Background("/Backgrounds/rete.gif", 0.1);
+        mountains = new Background("/Backgrounds/mali.gif", 0.2);
 		
 		// tilemap
 		tileMap = new TileMap(30);
