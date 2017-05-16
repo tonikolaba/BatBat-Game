@@ -1,9 +1,9 @@
-# Angels Pop 
+# Bat Bat
 
-Angels Pop is a java game, he had very simply mission: to survive and to kill the evil. Angel is the player how is asked to kill the Pop (purple), witch will be the evil. The Pop have many forms and is the mission of Angel to find and discover in any level.
+Bat Bat is a java game, he had very simply mission: to survive and to kill the evil. Angel is the player how is asked to kill the Pop (purple), witch will be the evil. The Pop have many forms and is the mission of Angel to find and discover in any level.
 
 
-![fotoGame](https://github.com/tonikolaba/AngelsPop/blob/master/infoweb/gameinfo.gif)
+
 
 
 ## Getting Started
@@ -13,7 +13,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Running
 
-Angels Pop is to easy to run on you local machine just follow the steps:
+Bat Bat game is to easy to run on you local machine just follow the steps:
 
 ```
 1 - Import project as Workspace (File/Import/general select Existing Projects into Workspace)
