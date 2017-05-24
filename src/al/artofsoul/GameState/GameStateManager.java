@@ -5,20 +5,18 @@ import al.artofsoul.Main.GamePanel;
 
 public class GameStateManager {
 	
-	private GameState[] gameStates;
-	private int currentState;
-	
-	private PauseState pauseState;
-	private boolean paused;
-	
 	public static final int NUMGAMESTATES = 16;
 	public static final int MENUSTATE = 0;
 	public static final int LEVEL1ASTATE = 2;
 	public static final int LEVEL1BSTATE = 3;
 	public static final int LEVEL1CSTATE = 4;
 	public static final int ACIDSTATE = 15;
-	
-	public GameStateManager() {
+    private GameState[] gameStates;
+    private int currentState;
+    private PauseState pauseState;
+    private boolean paused;
+
+    public GameStateManager() {
 		
 		JukeBox.init();
 		
@@ -35,13 +33,17 @@ public class GameStateManager {
 	private void loadState(int state) {
 		if(state == MENUSTATE)
 			gameStates[state] = new MenuState(this);
-		else if(state == LEVEL1ASTATE)
-			gameStates[state] = new Level1AState(this);
-		else if(state == LEVEL1BSTATE)
-			gameStates[state] = new Level1BState(this);
-		else if(state == LEVEL1CSTATE)
-			gameStates[state] = new Level1CState(this);
-		else if(state == ACIDSTATE)
+        else if (state == OPTIONSSTATE)
+            gameStates[state] = new OptionsState(this);
+        else if (state == LEVEL1STATE)
+            gameStates[state] = new Level1State(this);
+        else if (state == LEVEL2STATE)
+            gameStates[state] = new Level2State(this);
+        else if (state == LEVEL3STATE)
+            gameStates[state] = new Level3State(this);
+        else if (state == LEVEL4STATE)
+            gameStates[state] = new Level4State(this);
+        else if(state == ACIDSTATE)
 			gameStates[state] = new AcidState(this);
 	}
 	

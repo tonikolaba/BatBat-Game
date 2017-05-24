@@ -16,17 +16,14 @@ import java.awt.image.BufferedImage;
  */
 
 public class MenuState extends GameState {
-	
+
+	final ImageIcon howTo = new javax.swing.ImageIcon(getClass().getResource("/Backgrounds/howTo.gif"));
 	private BufferedImage bg;
 	private BufferedImage head;
-
-    final ImageIcon howTo = new javax.swing.ImageIcon(getClass().getResource("/Backgrounds/howTo.gif"));
-
     private int currentChoice = 0;
 	private String[] options = {
 			"Play",
             "Options",
-            "HowTo?",
             "Quit"
 	};
 	
@@ -38,7 +35,6 @@ public class MenuState extends GameState {
 		super(gsm);
 				
 		try {
-
             bg = ImageIO.read(getClass().getResourceAsStream("/Backgrounds/sfondi.gif")).getSubimage(0, 0, GamePanel.WIDTH, GamePanel.HEIGHT);
 
             // load floating head
@@ -52,7 +48,6 @@ public class MenuState extends GameState {
 			// load sound fx
 			JukeBox.load("/SFX/menuoption.mp3", "menuoption");
 			JukeBox.load("/SFX/menuselect.mp3", "menuselect");
-			
 		}
 		catch(Exception e) {
 			e.printStackTrace();
@@ -76,20 +71,16 @@ public class MenuState extends GameState {
 
         g.drawString("Play", 140, 133);
         g.drawString("Options", 140, 148);
-        g.drawString("HowTo?", 140, 163);
-        g.drawString("Quit", 140, 178);
+		g.drawString("Quit", 140, 163);
 
         // draw floating head
         if (currentChoice == 0) g.drawImage(head, 120, 123, null);
         else if (currentChoice == 1) g.drawImage(head, 120, 138, null);
         else if (currentChoice == 2) g.drawImage(head, 120, 153, null);
-        else if (currentChoice == 3) g.drawImage(head, 120, 168, null);
-
 
         // other
 		g.setFont(font2);
-		g.drawString("2017 toni kolaba", 10, 232);
-		
+		g.drawString("2017 � toni kolaba", 10, 232);
 	}
 
 
@@ -103,15 +94,12 @@ public class MenuState extends GameState {
             case 0:
                 JukeBox.play("menuselect");
 			PlayerSave.init();
-			gsm.setState(GameStateManager.LEVEL1CSTATE); /// start this level entrance
-                break;
+				gsm.setState(GameStateManager.LEVEL1STATE); /// start this level entrance
+				break;
             case 1:
-                gsm.setState(GameStateManager.MENUSTATE);
-                break;
+				gsm.setState(GameStateManager.OPTIONSSTATE);
+				break;
             case 2:
-                siLuhet();
-                break;
-            case 3:
                 System.exit(0);
                 break;
         }
