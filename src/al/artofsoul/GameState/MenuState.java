@@ -17,12 +17,12 @@ import java.awt.image.BufferedImage;
 
 public class MenuState extends GameState {
 
-	final ImageIcon howTo = new javax.swing.ImageIcon(getClass().getResource("/Backgrounds/howTo.gif"));
+	
 	private BufferedImage bg;
 	private BufferedImage head;
     private int currentChoice = 0;
 	private String[] options = {
-			"Play",
+	    "Play",
             "Options",
             "Quit"
 	};
@@ -82,12 +82,6 @@ public class MenuState extends GameState {
 		g.setFont(font2);
 		g.drawString("2017 � toni kolaba", 10, 232);
 	}
-
-
-    public void siLuhet() {
-        JOptionPane.showMessageDialog(null, "", "HowTo Paly?", JOptionPane.INFORMATION_MESSAGE, howTo);
-    }
-
 
     private void select() {
         switch (currentChoice) {
