@@ -1,4 +1,5 @@
 [![Dependency Status](https://www.versioneye.com/user/projects/592800b3131ac0005f456f0c/badge.svg?style=flat-square)](https://www.versioneye.com/user/projects/592800b3131ac0005f456f0c)
+[![AppVeyor Build status](https://ci.appveyor.com/api/projects/status/bj4gqn3gp3gu45sa?svg=true)](https://ci.appveyor.com/project/tonikolaba/batbat-game/ "AppVeyor Build status")
 [![Build Status](https://travis-ci.org/tonikolaba/BatBat-Game.svg?branch=master)](https://travis-ci.org/tonikolaba/BatBat-Game)
 
 # BatBat Game
