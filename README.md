@@ -1,6 +1,8 @@
 # BatBat Game
 
-BatBat is a java game, he had very simply mission: to survive and to kill the evil. BatBat is the player how is asked to kill the anyone in his way, witch are evil. Evil have many forms and is the mission of BatBat to find and discover in any level.
+BatBat is a java game, he had very simply mission: to survive and to kill the evil. BatBat is the player how is asked to kill the anyone in his way, which are evil. Evil have many forms and is the mission of BatBat to find and discover in any level, for now the game have 4 levels.
+
+![Alt text](https://github.com/tonikolaba/BatBat-Game/blob/master/about/bg.gif)
 
 ## Getting Started
 
@@ -19,6 +21,12 @@ BatBat Game is to easy to run on you local machine just follow the steps:
 Simply!
  
 ## Built With
+
+
+* [Maven](https://maven.apache.org/) - Apache Maven
+
+Apache Maven is a software project management and comprehension tool. Based on the concept of a project object model (POM), Maven can manage a project's build, reporting and documentation from a central piece of information. 
+
 
 * [Java](http://www.oracle.com/technetwork/topics/newtojava/overview/index.html) - Java Library
 
