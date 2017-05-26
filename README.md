@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/tonikolaba/BatBat-Game.svg?branch=master)](https://travis-ci.org/tonikolaba/BatBat-Game)
+
 # BatBat Game
 
 BatBat is a java game, he had very simply mission: to survive and to kill the evil. BatBat is the player how is asked to kill the anyone in his way, which are evil. Evil have many forms and is the mission of BatBat to find and discover in any level, for now the game have 4 levels.
