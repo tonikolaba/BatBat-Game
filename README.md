@@ -1,3 +1,4 @@
+[![Dependency Status](https://www.versioneye.com/user/projects/592800b3131ac0005f456f0c/badge.svg?style=flat-square)](https://www.versioneye.com/user/projects/592800b3131ac0005f456f0c)
 [![Build Status](https://travis-ci.org/tonikolaba/BatBat-Game.svg?branch=master)](https://travis-ci.org/tonikolaba/BatBat-Game)
 
 # BatBat Game
