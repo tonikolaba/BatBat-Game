@@ -1,3 +1,4 @@
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/e9e43be11a8a4ca68a9186507060147c)](https://www.codacy.com/app/tonikolaba/BatBat-Game?utm_source=github.com&utm_medium=referral&utm_content=tonikolaba/BatBat-Game&utm_campaign=badger)
 [![Dependency Status](https://www.versioneye.com/user/projects/592800b3131ac0005f456f0c/badge.svg?style=flat-square)](https://www.versioneye.com/user/projects/592800b3131ac0005f456f0c)
 [![AppVeyor Build status](https://ci.appveyor.com/api/projects/status/bj4gqn3gp3gu45sa?svg=true)](https://ci.appveyor.com/project/tonikolaba/batbat-game/ "AppVeyor Build status")
 [![Build Status](https://travis-ci.org/tonikolaba/BatBat-Game.svg?branch=master)](https://travis-ci.org/tonikolaba/BatBat-Game)
