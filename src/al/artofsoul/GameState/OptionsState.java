@@ -15,7 +15,7 @@ import java.awt.image.BufferedImage;
 
 public class OptionsState extends GameState {
 
-    final ImageIcon howTo = new javax.swing.ImageIcon(getClass().getResource("/Backgrounds/howTo.gif"));
+    final ImageIcon howTo = new ImageIcon(getClass().getResource("/Backgrounds/howTo.gif"));
     private BufferedImage bg;
     private BufferedImage head;
     private int currentChoice = 0;
