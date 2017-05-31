@@ -78,7 +78,7 @@ public class MenuState extends GameState {
 
 		// other
 		g.setFont(font2);
-		g.drawString("2017 © toni kolaba", 10, 232);
+		g.drawString("2017 Â© toni kolaba", 10, 232);
 	}
 
 	private void select() {
@@ -93,7 +93,7 @@ public class MenuState extends GameState {
 			gsm.setState(GameStateManager.OPTIONSSTATE);
 			break;
 		case 2:
-			System.exit(0);
+			Runtime.getRuntime().exit(0); 
 			break;
 		}
 	}
