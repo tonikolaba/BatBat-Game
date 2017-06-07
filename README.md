@@ -32,7 +32,6 @@ Simply!
 
 Apache Maven is a software project management and comprehension tool. Based on the concept of a project object model (POM), Maven can manage a project's build, reporting and documentation from a central piece of information. 
 
-
 * [Java](http://www.oracle.com/technetwork/topics/newtojava/overview/index.html) - Java Library
 
 Java is the foundation for virtually every type of networked application and is the global standard for developing and delivering enterprise software, web-based content, games and mobile applications. Java enjoys a large and mature ecosystem with strong tools support. Java delivers application portability and robust performance across many computing environments.
