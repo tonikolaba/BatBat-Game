@@ -51,6 +51,11 @@
 			<artifactId>tritonus-share</artifactId>
 			<version>0.3.7-3</version>
 		</dependency>
+		<dependency>
+  			<groupId>com.rollbar</groupId>
+   			<artifactId>rollbar</artifactId>
+   			<version>0.5.3</version>
+		</dependency>
 	</dependencies>
 
 	<build>
@@ -162,7 +167,6 @@
 					<team>Owners</team>
 				</configuration>
 			</plugin>
-
 		</plugins>
 	</build>
 
