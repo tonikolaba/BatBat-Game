@@ -31,15 +31,11 @@ public class MenuState extends GameState {
 		try {
 			bg = ImageIO.read(getClass().getResourceAsStream("/Backgrounds/sfondi.gif")).getSubimage(0, 0,
 					GamePanel.WIDTH, GamePanel.HEIGHT);
-
 			// load floating head
 			head = ImageIO.read(getClass().getResourceAsStream("/HUD/Hud.gif")).getSubimage(0, 12, 12, 11);
-
 			// titles and fonts
-
 			font = new Font("Arial", Font.BOLD, 11);
 			font2 = new Font("Arial", Font.PLAIN, 9);
-
 			// load sound fx
 			JukeBox.load("/SFX/menuoption.mp3", "menuoption");
 			JukeBox.load("/SFX/menuselect.mp3", "menuselect");
@@ -48,8 +44,7 @@ public class MenuState extends GameState {
 		}
 	}
 
-	public void init() {
-	}
+	public void init() {}
 
 	public void update() {
 		// check keys
@@ -59,15 +54,12 @@ public class MenuState extends GameState {
 	public void draw(Graphics2D g) {
 		// draw bg
 		g.drawImage(bg, 0, 0, null);
-
 		// draw menu options
 		g.setFont(font);
 		g.setColor(Color.WHITE);
-
 		g.drawString("Play", 140, 133);
 		g.drawString("Options", 140, 148);
 		g.drawString("Quit", 140, 163);
-
 		// draw floating head
 		if (currentChoice == 0)
 			g.drawImage(head, 120, 123, null);
@@ -75,7 +67,6 @@ public class MenuState extends GameState {
 			g.drawImage(head, 120, 138, null);
 		else if (currentChoice == 2)
 			g.drawImage(head, 120, 153, null);
-
 		// other
 		g.setFont(font2);
 		g.drawString("2017 © toni kolaba", 10, 232);
