@@ -12,6 +12,12 @@ BatBat is a java game, he had very simply mission: to survive and to kill the ev
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+## Playing
+
+![alt text](https://github.com/tonikolaba/BatBat-Game/blob/master/about/1.PNG) | ![alt text](https://github.com/tonikolaba/BatBat-Game/blob/master/about/6.PNG)
+------------ | -------------
+![alt text](https://github.com/tonikolaba/BatBat-Game/blob/master/about/2.PNG) | ![alt text](https://github.com/tonikolaba/BatBat-Game/blob/master/about/3.PNG)
+------------ | -------------
 
 ### Running
 
