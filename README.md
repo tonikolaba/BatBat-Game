@@ -2,6 +2,11 @@
 [![Dependency Status](https://www.versioneye.com/user/projects/592800b3131ac0005f456f0c/badge.svg?style=flat-square)](https://www.versioneye.com/user/projects/592800b3131ac0005f456f0c)
 [![AppVeyor Build status](https://ci.appveyor.com/api/projects/status/bj4gqn3gp3gu45sa?svg=true)](https://ci.appveyor.com/project/tonikolaba/batbat-game/ "AppVeyor Build status")
 [![Build Status](https://travis-ci.org/tonikolaba/BatBat-Game.svg?branch=master)](https://travis-ci.org/tonikolaba/BatBat-Game)
+[![GitHub issues](https://img.shields.io/github/issues/tonikolaba/BatBat-Game.svg)](https://github.com/tonikolaba/BatBat-Game/issues)
+[![Hex.pm](https://img.shields.io/hexpm/dt/plug.svg)](https://github.com/tonikolaba/BatBat-Game/releases/tag/1.0)
+[![GitHub license](https://img.shields.io/badge/license-AGPL-blue.svg)](https://raw.githubusercontent.com/tonikolaba/BatBat-Game/master/License.md)
+[![Twitter](https://img.shields.io/twitter/url/https/github.com/tonikolaba/BatBat-Game/.svg?style=social)](https://twitter.com/intent/tweet?text=Wow:&url=%5Bobject%20Object%5D)
+
 
 # BatBat Game
 
