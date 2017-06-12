@@ -69,7 +69,7 @@ public class MenuState extends GameState {
 			g.drawImage(head, 120, 153, null);
 		// other
 		g.setFont(font2);
-		g.drawString("2017 Â© toni kolaba", 10, 232);
+		g.drawString("2017 © toni kolaba", 10, 232);
 	}
 
 	private void select() {
