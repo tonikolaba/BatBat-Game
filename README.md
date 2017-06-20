@@ -1,13 +1,14 @@
+BatBat Game
+===================
+
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/e9e43be11a8a4ca68a9186507060147c)](https://www.codacy.com/app/tonikolaba/BatBat-Game?utm_source=github.com&utm_medium=referral&utm_content=tonikolaba/BatBat-Game&utm_campaign=badger)
 [![Dependency Status](https://www.versioneye.com/user/projects/592800b3131ac0005f456f0c/badge.svg?style=flat-square)](https://www.versioneye.com/user/projects/592800b3131ac0005f456f0c)
 [![AppVeyor Build status](https://ci.appveyor.com/api/projects/status/bj4gqn3gp3gu45sa?svg=true)](https://ci.appveyor.com/project/tonikolaba/batbat-game/ "AppVeyor Build status")
 [![Build Status](https://travis-ci.org/tonikolaba/BatBat-Game.svg?branch=master)](https://travis-ci.org/tonikolaba/BatBat-Game)
 [![Hex.pm](https://img.shields.io/hexpm/dt/plug.svg)](https://github.com/tonikolaba/BatBat-Game/releases/tag/1.0)
 [![GitHub license](https://img.shields.io/badge/license-AGPL-blue.svg)](https://raw.githubusercontent.com/tonikolaba/BatBat-Game/master/License.md)
-[![Twitter](https://img.shields.io/twitter/url/https/github.com/tonikolaba/BatBat-Game/.svg?style=social)](https://twitter.com/intent/tweet?text=%23BatBat%20%23Game%20🔋%20⚡️%20is%20a%20free%20and%20fun%20java%20game%2E%20Developer%20%40tonikolaba)
-
-
-# BatBat Game
+[![Twitter](https://img.shields.io/twitter/url/https/github.com/tonikolaba/BatBat-Game/.svg?style=social)](https://twitter.com/intent/tweet?text=%23BatBat%20%23Game%20??%20??%20is%20a%20free%20and%20fun%20java%20game%2E%20Developer%20%40tonikolaba)
+----------
 
 BatBat is a java game, he had very simply mission: to survive and to kill the evil. BatBat is the player how is asked to kill the anyone in his way, which are evil. Evil have many forms and is the mission of BatBat to find and discover in any level, for now the game have 4 levels.
 
