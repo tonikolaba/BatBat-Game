@@ -59,7 +59,7 @@ public class Spirit extends Enemy {
 		
 		try {
 			BufferedImage spritesheet = ImageIO.read(
-					getClass().getResourceAsStream("/Sprites/Enemies/Spirit2.gif")
+					getClass().getResourceAsStream("/Sprites/Enemies/Spirit.gif")
 			);
 			sprites = new BufferedImage[4];
 			for(int i = 0; i < sprites.length; i++) {
