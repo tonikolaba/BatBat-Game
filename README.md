@@ -34,7 +34,7 @@ BatBat Game can easy be [Fork](https://github.com/artofsoul/BatBat-Game#fork-des
 
 ```
 
-If you want to play the game on **Windows** (7, 8, 10) the setup file can be found on [BatBat-Setup](https://github.com/tonikolaba/download/tree/master/Windows/BatBat%20Game) and any other information for any error or problem. 
+:bookmark_tabs: **If you want to play the game on Windows (7, 8, 10) the setup file can be found on [BatBat-Setup](https://github.com/tonikolaba/download/tree/master/Windows/BatBat%20Game) and any other information for any error or problem.** 
 
 
 Simply!
