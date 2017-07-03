@@ -5,7 +5,7 @@ BatBat Game
 [![Dependency Status](https://www.versioneye.com/user/projects/592800b3131ac0005f456f0c/badge.svg?style=flat-square)](https://www.versioneye.com/user/projects/592800b3131ac0005f456f0c)
 [![AppVeyor Build status](https://ci.appveyor.com/api/projects/status/bj4gqn3gp3gu45sa?svg=true)](https://ci.appveyor.com/project/tonikolaba/batbat-game/ "AppVeyor Build status")
 [![Build Status](https://travis-ci.org/tonikolaba/BatBat-Game.svg?branch=master)](https://travis-ci.org/tonikolaba/BatBat-Game)
-[![GitHub license](https://img.shields.io/badge/license-AGPL-blue.svg)](https://raw.githubusercontent.com/tonikolaba/BatBat-Game/master/License.md)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/tonikolaba/BatBat-Game/master/License.md)
 [![Twitter](https://img.shields.io/twitter/url/https/github.com/tonikolaba/BatBat-Game/.svg?style=social)](https://twitter.com/intent/tweet?text=%23BatBat%20%23Game%20??%20??%20is%20a%20free%20and%20fun%20java%20game%2E%20Developer%20%40tonikolaba)
 ----------
 
@@ -33,7 +33,7 @@ BatBat Game can easy be [Fork](https://github.com/artofsoul/BatBat-Game#fork-des
 
 ```
 
-:bookmark_tabs: **If you want to play the game on Windows (7, 8, 10) the setup file can be found on [BatBat-Setup](https://github.com/tonikolaba/download/tree/master/Windows/BatBat%20Game) and any other information for any error or problem.** 
+:bookmark_tabs: **If you want to play the game on Windows (7, 8, 10) the setup file can be found on [BatBat-Setup](https://github.com/tonikolaba/download/tree/master/Windows/BatBat%20Game) or [GameJolt](http://gamejolt.com/games/BatBat-Game/264212) and any other information for any error or problem.** 
 
 
 Simply!
