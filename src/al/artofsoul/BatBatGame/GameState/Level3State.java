@@ -431,7 +431,7 @@ public class Level3State extends GameState {
             PlayerSave.setHealth(player.getHealth());
             PlayerSave.setLives(player.getLives());
             PlayerSave.setTime(player.getTime());
-            gsm.setState(GameStateManager.LEVEL4STATE);
+            gsm.setState(GameStateManager.LEVEL2STATE);
         }
 
     }
