@@ -1,4 +1,4 @@
-BatBat Game
+![Alt text](https://github.com/tonikolaba/download/blob/master/Windows/BatBat%20Game/BatBat.jpg)
 ===================
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/e9e43be11a8a4ca68a9186507060147c)](https://www.codacy.com/app/tonikolaba/BatBat-Game?utm_source=github.com&utm_medium=referral&utm_content=tonikolaba/BatBat-Game&utm_campaign=badger)
@@ -9,21 +9,19 @@ BatBat Game
 [![Twitter](https://img.shields.io/twitter/url/https/github.com/tonikolaba/BatBat-Game/.svg?style=social)](https://twitter.com/intent/tweet?text=%23BatBat%20%23Game%20??%20??%20is%20a%20free%20and%20fun%20java%20game%2E%20Developer%20%40tonikolaba)
 ----------
 
+
+## Getting Started
+
 BatBat is a java game, he had very simply mission: to survive and to kill the evil. BatBat is the player how is asked to kill anyone in his way, which are evil. Evil have many forms and is the mission of BatBat to find and discover in any level, for now the game have 4 levels.
 
 ![Alt text](https://github.com/tonikolaba/BatBat-Game/blob/master/about/bg.gif)
-
-[Demo](https://gamejolt.com/games/BatBat-Game/264212)
-
-
-## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
 ![alt text](https://github.com/tonikolaba/BatBat-Game/blob/master/about/1.gif) | ![alt text](https://github.com/tonikolaba/BatBat-Game/blob/master/about/6.gif)
 ------------ | -------------
 
-# Run
+## Run
 
 BatBat Game can easy be [Fork](https://github.com/artofsoul/BatBat-Game#fork-destination-box) on you IDE just follow the steps:
 
