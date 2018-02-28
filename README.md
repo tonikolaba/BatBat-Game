@@ -11,7 +11,8 @@ BatBat Game
 
 BatBat is a java game, he had very simply mission: to survive and to kill the evil. BatBat is the player how is asked to kill anyone in his way, which are evil. Evil have many forms and is the mission of BatBat to find and discover in any level, for now the game have 4 levels.
 
-![Alt text](https://github.com/tonikolaba/BatBat-Game/blob/master/about/bg.gif)
+ ![alt text](https://github.com/tonikolaba/download/blob/master/Windows/BatBat%20Game/BatBat-Video.gif)
+
 
 ## Getting Started
 
