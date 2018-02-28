@@ -13,7 +13,7 @@ BatBat is a java game, he had very simply mission: to survive and to kill the ev
 
 ![Alt text](https://github.com/tonikolaba/BatBat-Game/blob/master/about/bg.gif)
 
-[Demo](https://github.com/tonikolaba/download/blob/master/Windows/BatBat%20Game/BatBat-Video.gif)
+[Demo](https://gamejolt.com/games/BatBat-Game/264212)
 
 
 ## Getting Started
