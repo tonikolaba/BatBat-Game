@@ -52,4 +52,4 @@ Simply!
 
 * **Toni Kolaba** - *Initial work* - [tonikolaba](https://github.com/tonikolaba)
 
-![Alt text](https://github.com/tonikolaba/download/blob/master/info/artofsoullogoVOG.png)
+![Alt text](https://github.com/tonikolaba/download/blob/master/info/artofsoullogoNewVOG.png)
