@@ -1,0 +1,16 @@
+<component name="libraryTable">
+  <library name="lib">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/target/lib/rollbar-sender-0.5.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/target/lib/rollbar-utilities-0.5.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/target/lib/tritonus-share-0.3.7-3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/target/lib/rollbar-0.5.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/target/lib/rollbar-payload-0.5.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/target/lib/junit-3.8.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/target/lib/mp3spi-1.9.5-2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/target/lib/jlayer-1.0.1-2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

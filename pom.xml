@@ -1,22 +1,32 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
-	<groupId>al.artofsoul.BatBatGame</groupId>
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>al.artofsoul.batbatgame</groupId>
 	<artifactId>BatBat-Game</artifactId>
 	<version>1.0-SNAPSHOT</version>
 
 	<name>BatBat-Game</name>
+	<url>http://www.github.com/tonikolaba/BatBat-Game</url>
 	<description>A small platform game tutorial top build a basic Framework over the sample game, and extract useful
-        mechanism.
-    </description>
+		mechanism.
+	</description>
+
 
 	<inceptionYear>2017</inceptionYear>
 	<organization>
 		<name>tonikolaba</name>
 	</organization>
 
-
+	<developers>
+		<developer>
+			<name>tonikolaba</name>
+			<email>tonikolaba@hotmail.com</email>
+			<roles>
+				<role>Project leader/manager</role>
+			</roles>
+		</developer>
+	</developers>
 	<contributors>
 		<contributor>
 			<name>tonikolaba</name>
@@ -32,7 +42,7 @@
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<timestamp>${maven.build.timestamp}</timestamp>
 		<maven.build.timestamp.format>yyyy-MM-dd HH:mm</maven.build.timestamp.format>
-		<mainClass>al.artofsoul.BatBatGame.Main.Game</mainClass>
+		<mainClass>al.artofsoul.batbatgame.main.Game</mainClass>
 	</properties>
 
 	<dependencies>
@@ -59,7 +69,14 @@
 	</dependencies>
 
 	<build>
+		<resources>
+			<resource>
+				<directory>./Resources</directory>
+			</resource>
+		</resources>
+
 		<plugins>
+
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
@@ -70,6 +87,15 @@
 					<encoding>UTF-8</encoding>
 				</configuration>
 			</plugin>
+
+			<!--<plugin>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>3.0.2</version>
+                <configuration>
+                    <encoding>UTF-8</encoding>
+                </configuration>
+            </plugin> gabim nga Goria-->
+
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-resources-plugin</artifactId>
@@ -90,7 +116,6 @@
 							<goal>copy-dependencies</goal>
 						</goals>
 						<configuration>
-
 							<artifactItems>
 								<artifactItem>
 									<groupId>com.github.jsimone</groupId>
@@ -126,6 +151,7 @@
 					</execution>
 				</executions>
 			</plugin>
+			<!-- Produce Sources JAR -->
 			<!-- Produce Sources JAR -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -166,6 +192,32 @@
 					</archive>
 				</configuration>
 			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-shade-plugin</artifactId>
+				<version>2.3</version>
+				<executions>
+					<!-- Run shade goal on package phase -->
+					<execution>
+						<phase>package</phase>
+						<goals>
+							<goal>shade</goal>
+						</goals>
+						<configuration>
+							<transformers>
+								<!-- add Main-Class to manifest file    in transformer  implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer"-->
+								<transformer
+										implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+									<mainClass>${mainClass}</mainClass>
+								</transformer>
+							</transformers>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+
+
 			<plugin>
 				<groupId>com.versioneye</groupId>
 				<artifactId>versioneye-maven-plugin</artifactId>
@@ -175,9 +227,9 @@
 					<apiKey>2cb0e33d5f775d2b8e78</apiKey>
 					<organisation>artofsoul</organisation>
 					<name>artofsoul</name>
-					<visibility>TrueOrFalse</visibility>-->
-          				<transitiveDependencies>true</transitiveDependencies>
-					<team>artofsoul</team>	
+					<visibility>TrueOrFalse</visibility>
+					<transitiveDependencies>true</transitiveDependencies>
+					<team>artofsoul</team>
 				</configuration>
 			</plugin>
 		</plugins>
