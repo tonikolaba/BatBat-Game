@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="target">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/target/original-BatBat-Game-1.0-SNAPSHOT.jar!/" />
+      <root url="jar://$PROJECT_DIR$/target/BatBat-Game-1.0-SNAPSHOT-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/target/BatBat-Game-1.0-SNAPSHOT-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/target/BatBat-Game-1.0-SNAPSHOT.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="apidocs">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/target/apidocs/member-search-index.zip!/" />
+      <root url="jar://$PROJECT_DIR$/target/apidocs/type-search-index.zip!/" />
+      <root url="jar://$PROJECT_DIR$/target/apidocs/package-search-index.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
