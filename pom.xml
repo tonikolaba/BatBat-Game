@@ -46,6 +46,12 @@
 	</properties>
 
 	<dependencies>
+
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.17</version>
+		</dependency>
 		<dependency>
 			<groupId>com.googlecode.soundlibs</groupId>
 			<artifactId>jlayer</artifactId>
@@ -66,9 +72,19 @@
 			<artifactId>rollbar</artifactId>
 			<version>0.5.4</version>
 		</dependency>
+		<dependency>
+			<groupId>org.sonarsource.scanner.maven</groupId>
+			<artifactId>sonar-maven-plugin</artifactId>
+			<version>3.4.0.905</version>
+		</dependency>
 	</dependencies>
 
+
 	<build>
+
+		<defaultGoal>clean install</defaultGoal>
+		<sourceDirectory>src</sourceDirectory>
+
 		<resources>
 			<resource>
 				<directory>./Resources</directory>
@@ -76,6 +92,7 @@
 		</resources>
 
 		<plugins>
+
 
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -88,14 +105,6 @@
 				</configuration>
 			</plugin>
 
-			<!--<plugin>
-                <artifactId>maven-resources-plugin</artifactId>
-                <version>3.0.2</version>
-                <configuration>
-                    <encoding>UTF-8</encoding>
-                </configuration>
-            </plugin> gabim nga Goria-->
-
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-resources-plugin</artifactId>
@@ -104,6 +113,8 @@
 					<encoding>UTF-8</encoding>
 				</configuration>
 			</plugin>
+
+
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-dependency-plugin</artifactId>

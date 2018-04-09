@@ -16,7 +16,6 @@ import java.util.logging.Level;
  * Created by tonikolaba on 03-Jan-18.
  */
 
-
 public abstract class BasicState {
     private static final String MENU_OPTION = "menuoption";
     protected GameStateManager gsm;
@@ -74,7 +73,7 @@ public abstract class BasicState {
             g.drawImage(head, 120, 153, null);
         // other
         g.setFont(font2);
-        g.drawString("2017 © toni kolaba", 10, 232);
+        g.drawString("2017 � toni kolaba", 10, 232);
     }
 
     protected void select() {
@@ -95,4 +94,3 @@ public abstract class BasicState {
     }
 
 }
-

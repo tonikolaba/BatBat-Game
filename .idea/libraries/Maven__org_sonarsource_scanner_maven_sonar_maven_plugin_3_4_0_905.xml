@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.sonarsource.scanner.maven:sonar-maven-plugin:3.4.0.905">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/sonarsource/scanner/maven/sonar-maven-plugin/3.4.0.905/sonar-maven-plugin-3.4.0.905.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/sonarsource/scanner/maven/sonar-maven-plugin/3.4.0.905/sonar-maven-plugin-3.4.0.905-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/sonarsource/scanner/maven/sonar-maven-plugin/3.4.0.905/sonar-maven-plugin-3.4.0.905-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -48,7 +48,7 @@ Simply!
 * [MP3SPI](http://www.javazoom.net/mp3spi/mp3spi.html) - MP3SPI Library
 * [Tritonus](http://www.tritonus.org/plugins.html) - Tritonus Library 
 
-## Authors
+## Author
 
 * **Toni Kolaba** - *Initial work* - [tonikolaba](https://github.com/tonikolaba)
 

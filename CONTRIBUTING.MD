@@ -35,4 +35,4 @@ BatBat Game can easy be [Fork](https://github.com/artofsoul/BatBat-Game#fork-des
 
 * **Toni Kolaba** - *Initial work* - [tonikolaba](https://github.com/tonikolaba)
 
-![Alt text](https://github.com/tonikolaba/download/blob/master/info/artofsoullogoVOG.png)
+![Alt text](https://github.com/tonikolaba/download/blob/master/info/artofsoullogoNewVOG.png)

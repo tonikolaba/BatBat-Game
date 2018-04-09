@@ -1,3 +1,3 @@
 CD ..
 CD ..
-call mvn install
+call mvn clean install
