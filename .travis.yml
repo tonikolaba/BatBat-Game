@@ -3,21 +3,20 @@ language: java
 sudo: required
 
 jdk:
-  - oraclejdk9
+  #- oraclejdk9
   - oraclejdk8
-  - oraclejdk7
-
+  #- oraclejdk7
 
 
 addons:
   sonarcloud:
     organization: "tonikolaba-github"
-    token: $BatBat-Game
+    token: $BatBat_Game
     install: true
 
 script:
-  - sudo apt-get update && sudo apt-get install oracle-java8-installer
-  - java -version
+  #- sudo apt-get update && sudo apt-get install oracle-java8-installer
+  #- java -version
   - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar
 
 
