@@ -31,6 +31,6 @@ public class MapObjectTest {
         assertEquals(0, obj.currCol); //expected true
         assertEquals(-1, obj.currRow); // expected false, is 0
 
-        assertTrue(obj.falling); //expected true
+        assertTrue(obj.falling); //expected true, because changed after condition check
     }
 }

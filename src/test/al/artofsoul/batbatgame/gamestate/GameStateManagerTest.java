@@ -8,7 +8,7 @@ public class GameStateManagerTest {
     @Test
     public void loadState() {
         //setup
-        al.artofsoul.batbatgame.gamestate.GameStateManager gm = new GameStateManager();
+        GameStateManager gm = new GameStateManager();
         //run functions
         gm.loadState(3);
         gm.loadState(4);
