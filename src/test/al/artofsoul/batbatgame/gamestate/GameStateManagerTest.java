@@ -23,7 +23,7 @@ public class GameStateManagerTest {
         assertNotNull(gm.gameStates[1]); //expected true
         assertNotNull(gm.gameStates[0]); //expected true
         assertNotNull(gm.gameStates[4]); //expected true
-        assertNull(gm.gameStates[16]); //failed, because out of bound
+        assertNull(gm.gameStates[16]); //expected false, because out of bound
         assertNull(gm.gameStates[13]); //expected true, but does not represent a game state
     }
 
