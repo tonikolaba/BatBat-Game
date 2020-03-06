@@ -23,7 +23,6 @@ public class PlayerTest {
         assertNotNull( p );
         p.setJumping(true);
         boolean jumping_status = p.jumping;
-
         assertFalse(!jumping_status);
         assertTrue( jumping_status);
 
@@ -33,14 +32,11 @@ public class PlayerTest {
         assertTrue( p.jumping );
         p.setJumping( false );
         assertFalse( p.jumping );
-
-
     }
 
     @Test
     public void testPositionOutOfMap(){
         /*
-
          */
         int mapsize = 20;
         TileMap tm = new TileMap( mapsize );
