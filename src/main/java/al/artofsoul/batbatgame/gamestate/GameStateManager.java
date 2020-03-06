@@ -17,7 +17,7 @@ public class GameStateManager {
     public static final int LEVEL3STATE = 4;
     public static final int LEVEL4STATE = 5;
     public static final int ACIDSTATE = 15;
-    private BasicState[] gameStates;
+    protected BasicState[] gameStates;
     private int currentState;
     private PauseState pauseState;
     private boolean paused;
@@ -36,7 +36,7 @@ public class GameStateManager {
 
     }
 
-    private void loadState(int state) {
+    protected void loadState(int state) {
         if (state == MENUSTATE)
             gameStates[state] = new MenuState(this);
         else if (state == OPTIONSSTATE)
