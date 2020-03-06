@@ -10,7 +10,7 @@ import java.awt.*;
  * @author ArtOfSoul
  */
 
-public abstract class MapObject {
+public class MapObject {
 
     // tile stuff
     protected TileMap tileMap;
