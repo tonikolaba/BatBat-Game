@@ -3,7 +3,7 @@ package al.artofsoul.batbatgame.entity;
 import al.artofsoul.batbatgame.audio.JukeBox;
 import al.artofsoul.batbatgame.handlers.LoggingHelper;
 import al.artofsoul.batbatgame.tilemap.TileMap;
-
+import al.artofsoul.batbatgame.entity.Animation;
 import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferedImage;
@@ -15,7 +15,7 @@ import java.util.logging.Level;
  * @author ArtOfSoul
  */
 
-public class Player extends MapObject {
+public class Player extends al.artofsoul.batbatgame.entity.MapObject {
 
     public static final int NONE_EMOTE = 0;
     public static final int CONFUSED_EMOTE = 1;
@@ -39,7 +39,7 @@ public class Player extends MapObject {
     private static final String PLAYERJUMP_MUSIC_NAME = "playerjump";
     private static final String PLAYERATTACK_MUSIC_NAME = "playerattack";
     // references
-    private ArrayList<Enemy> enemies;
+    private ArrayList<al.artofsoul.batbatgame.entity.Enemy> enemies;
     // player stuff
     private int lives;
     private int health;
@@ -53,10 +53,11 @@ public class Player extends MapObject {
     private boolean doubleJump;
     private boolean alreadyDoubleJump;
     private double doubleJumpStart;
-    private ArrayList<EnergyParticle> energyParticles;
-    private long time;
+    private ArrayList<al.artofsoul.batbatgame.entity.EnergyParticle> energyParticles;
+    protected long time;
     // actions
     protected boolean dashing;
+
     protected boolean attacking;
     protected boolean upattacking;
     protected boolean charging;
@@ -144,9 +145,9 @@ public class Player extends MapObject {
 
     }
 
-    public void init(List<Enemy> enemies, List<EnergyParticle> energyParticles) {
-        this.enemies = (ArrayList<Enemy>) enemies;
-        this.energyParticles = (ArrayList<EnergyParticle>) energyParticles;
+    public void init(List<al.artofsoul.batbatgame.entity.Enemy> enemies, List<al.artofsoul.batbatgame.entity.EnergyParticle> energyParticles) {
+        this.enemies = (ArrayList<al.artofsoul.batbatgame.entity.Enemy>) enemies;
+        this.energyParticles = (ArrayList<al.artofsoul.batbatgame.entity.EnergyParticle>) energyParticles;
     }
 
     public int getHealth() {
@@ -259,7 +260,8 @@ public class Player extends MapObject {
         if (flinching)
             return;
         //JukeBox.play("playerhit");
-        //stop();
+        stop();
+
         health -= damage;
         if (health < 0)
             health = 0;
@@ -314,7 +316,7 @@ public class Player extends MapObject {
             doubleJump = false;
             JukeBox.play(PLAYERJUMP_MUSIC_NAME);
             for (int i = 0; i < 6; i++) {
-                energyParticles.add(new EnergyParticle(tileMap, x, y + cheight / 4.0, EnergyParticle.ENERGY_DOWN));
+                energyParticles.add(new al.artofsoul.batbatgame.entity.EnergyParticle(tileMap, x, y + cheight / 4.0, al.artofsoul.batbatgame.entity.EnergyParticle.ENERGY_DOWN));
             }
         }
 
@@ -380,7 +382,7 @@ public class Player extends MapObject {
 
         // check teleporting
         if (teleporting) {
-            energyParticles.add(new EnergyParticle(tileMap, x, y, EnergyParticle.ENERGY_UP));
+            energyParticles.add(new al.artofsoul.batbatgame.entity.EnergyParticle(tileMap, x, y, al.artofsoul.batbatgame.entity.EnergyParticle.ENERGY_UP));
         }
 
         // update position
@@ -420,7 +422,7 @@ public class Player extends MapObject {
         }
 
         // energy particles
-        ArrayList<EnergyParticle> particlesToRemove = new ArrayList<>();
+        ArrayList<al.artofsoul.batbatgame.entity.EnergyParticle> particlesToRemove = new ArrayList<>();
         for (int i = 0; i < energyParticles.size(); i++) {
             energyParticles.get(i).update();
             if (energyParticles.get(i).shouldRemove()) {
@@ -428,7 +430,7 @@ public class Player extends MapObject {
             }
         }
 
-        for (EnergyParticle e : particlesToRemove) {
+        for (al.artofsoul.batbatgame.entity.EnergyParticle e : particlesToRemove) {
             energyParticles.remove(e);
         }
 
@@ -444,10 +446,10 @@ public class Player extends MapObject {
             cr.y = (int) y - 20;
             if (facingRight) {
                 cr.x = (int) x - 15;
-                energyParticles.add(new EnergyParticle(tileMap, x + 30, y, EnergyParticle.ENERGY_RIGHT));
+                energyParticles.add(new al.artofsoul.batbatgame.entity.EnergyParticle(tileMap, x + 30, y, al.artofsoul.batbatgame.entity.EnergyParticle.ENERGY_RIGHT));
             } else {
                 cr.x = (int) x - 35;
-                energyParticles.add(new EnergyParticle(tileMap, x - 30, y, EnergyParticle.ENERGY_LEFT));
+                energyParticles.add(new al.artofsoul.batbatgame.entity.EnergyParticle(tileMap, x - 30, y, al.artofsoul.batbatgame.entity.EnergyParticle.ENERGY_LEFT));
             }
 
         }
@@ -457,7 +459,7 @@ public class Player extends MapObject {
         // check enemy interaction
         for (int i = 0; i < enemies.size(); i++) {
 
-            Enemy e = enemies.get(i);
+            al.artofsoul.batbatgame.entity.Enemy e = enemies.get(i);
 
             // check attack
             if (currentAction == ATTACKING_ANIM && animation.getFrame() == 3 && animation.getCount() == 0
@@ -525,11 +527,11 @@ public class Player extends MapObject {
             if (animation.getFrame() == 4 && animation.getCount() == 0) {
                 for (int c = 0; c < 3; c++) {
                     if (facingRight)
-                        energyParticles.add(new EnergyParticle(tileMap, ar.x + ar.width - 4, ar.y + ar.height / 2,
-                                EnergyParticle.ENERGY_RIGHT));
+                        energyParticles.add(new al.artofsoul.batbatgame.entity.EnergyParticle(tileMap, ar.x + ar.width - 4, ar.y + ar.height / 2,
+                                al.artofsoul.batbatgame.entity.EnergyParticle.ENERGY_RIGHT));
                     else
-                        energyParticles.add(new EnergyParticle(tileMap, ar.x + 4, ar.y + ar.height / 2,
-                                EnergyParticle.ENERGY_LEFT));
+                        energyParticles.add(new al.artofsoul.batbatgame.entity.EnergyParticle(tileMap, ar.x + 4, ar.y + ar.height / 2,
+                                al.artofsoul.batbatgame.entity.EnergyParticle.ENERGY_LEFT));
                 }
             }
         }
@@ -545,7 +547,7 @@ public class Player extends MapObject {
             if (animation.getFrame() == 4 && animation.getCount() == 0) {
                 for (int c = 0; c < 3; c++) {
                     energyParticles.add(
-                            new EnergyParticle(tileMap, aur.x + aur.width / 2, aur.y + 5, EnergyParticle.ENERGY_UP));
+                            new al.artofsoul.batbatgame.entity.EnergyParticle(tileMap, aur.x + aur.width / 2, aur.y + 5, EnergyParticle.ENERGY_UP));
                 }
             }
         }
