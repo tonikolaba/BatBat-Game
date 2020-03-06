@@ -46,7 +46,7 @@ public class Player extends al.artofsoul.batbatgame.entity.MapObject {
     private int maxHealth;
     private int damage;
     private int chargeDamage;
-    private boolean knockback;
+    protected boolean knockback;
     private boolean flinching;
     private long flinchCount;
     private int score;
@@ -56,7 +56,8 @@ public class Player extends al.artofsoul.batbatgame.entity.MapObject {
     private ArrayList<al.artofsoul.batbatgame.entity.EnergyParticle> energyParticles;
     protected long time;
     // actions
-    private boolean dashing;
+    protected boolean dashing;
+
     protected boolean attacking;
     protected boolean upattacking;
     protected boolean charging;
@@ -135,8 +136,8 @@ public class Player extends al.artofsoul.batbatgame.entity.MapObject {
         energyParticles = new ArrayList<>();
 
         setAnimation(IDLE_ANIM);
-/*
-        JukeBox.load("/SFX/playerjump.mp3", PLAYERJUMP_MUSIC_NAME);
+
+        /*JukeBox.load("/SFX/playerjump.mp3", PLAYERJUMP_MUSIC_NAME);
         JukeBox.load("/SFX/playerlands.mp3", "playerlands");
         JukeBox.load("/SFX/playerattack.mp3", PLAYERATTACK_MUSIC_NAME);
         JukeBox.load("/SFX/playerhit.mp3", "playerhit");
@@ -260,6 +261,7 @@ public class Player extends al.artofsoul.batbatgame.entity.MapObject {
             return;
         //JukeBox.play("playerhit");
         stop();
+
         health -= damage;
         if (health < 0)
             health = 0;
