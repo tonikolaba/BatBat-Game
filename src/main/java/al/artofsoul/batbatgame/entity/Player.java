@@ -137,11 +137,13 @@ public class Player extends al.artofsoul.batbatgame.entity.MapObject {
 
         setAnimation(IDLE_ANIM);
 
-        /*JukeBox.load("/SFX/playerjump.mp3", PLAYERJUMP_MUSIC_NAME);
-        JukeBox.load("/SFX/playerlands.mp3", "playerlands");
-        JukeBox.load("/SFX/playerattack.mp3", PLAYERATTACK_MUSIC_NAME);
-        JukeBox.load("/SFX/playerhit.mp3", "playerhit");
-        JukeBox.load("/SFX/playercharge.mp3", "playercharge");*/
+
+//        JukeBox.load("/SFX/playerjump.mp3", PLAYERJUMP_MUSIC_NAME);
+//        JukeBox.load("/SFX/playerlands.mp3", "playerlands");
+//        JukeBox.load("/SFX/playerattack.mp3", PLAYERATTACK_MUSIC_NAME);
+//        JukeBox.load("/SFX/playerhit.mp3", "playerhit");
+//        JukeBox.load("/SFX/playercharge.mp3", "playercharge");
+
 
     }
 
@@ -196,7 +198,7 @@ public class Player extends al.artofsoul.batbatgame.entity.MapObject {
             return;
         if (!attacking && !upattacking && !charging) {
             charging = true;
-            JukeBox.play("playercharge");
+            //JukeBox.play("playercharge");
             chargingTick = 0;
         }
     }
@@ -307,14 +309,14 @@ public class Player extends al.artofsoul.batbatgame.entity.MapObject {
         if (jumping && !falling) {
             dy = jumpStart;
             falling = true;
-            JukeBox.play(PLAYERJUMP_MUSIC_NAME);
+           // JukeBox.play(PLAYERJUMP_MUSIC_NAME);
         }
 
         if (doubleJump) {
             dy = doubleJumpStart;
             alreadyDoubleJump = true;
             doubleJump = false;
-            JukeBox.play(PLAYERJUMP_MUSIC_NAME);
+            //JukeBox.play(PLAYERJUMP_MUSIC_NAME);
             for (int i = 0; i < 6; i++) {
                 energyParticles.add(new al.artofsoul.batbatgame.entity.EnergyParticle(tileMap, x, y + cheight / 4.0, al.artofsoul.batbatgame.entity.EnergyParticle.ENERGY_DOWN));
             }
@@ -391,7 +393,7 @@ public class Player extends al.artofsoul.batbatgame.entity.MapObject {
         checkTileMapCollision();
         setPosition(xtemp, ytemp);
         if (isFalling && !falling) {
-            JukeBox.play("playerlands");
+            //JukeBox.play("playerlands");
         }
         if (dx == 0)
             x = (int) x;

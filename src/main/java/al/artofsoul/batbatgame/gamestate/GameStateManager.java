@@ -1,5 +1,4 @@
 package al.artofsoul.batbatgame.gamestate;
-
 import al.artofsoul.batbatgame.audio.JukeBox;
 import al.artofsoul.batbatgame.main.GamePanel;
 
