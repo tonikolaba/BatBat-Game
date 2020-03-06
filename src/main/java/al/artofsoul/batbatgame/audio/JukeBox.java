@@ -20,7 +20,7 @@ public class JukeBox {
     private static boolean mute = false;
 
     private JukeBox() {
-        throw new IllegalStateException("Utility Class");
+        //throw new IllegalStateException("Utility Class");
     }
 
     public static void init() {

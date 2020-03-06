@@ -1,5 +1,4 @@
 package al.artofsoul.batbatgame.gamestate;
-
 import al.artofsoul.batbatgame.audio.JukeBox;
 import al.artofsoul.batbatgame.main.GamePanel;
 
@@ -17,7 +16,7 @@ public class GameStateManager {
     public static final int LEVEL3STATE = 4;
     public static final int LEVEL4STATE = 5;
     public static final int ACIDSTATE = 15;
-    protected BasicState[] gameStates;
+    private BasicState[] gameStates;
     private int currentState;
     private PauseState pauseState;
     private boolean paused;
@@ -36,7 +35,7 @@ public class GameStateManager {
 
     }
 
-    protected void loadState(int state) {
+    private void loadState(int state) {
         if (state == MENUSTATE)
             gameStates[state] = new MenuState(this);
         else if (state == OPTIONSSTATE)

@@ -30,6 +30,8 @@ public class Keys {
         throw new IllegalStateException("Utility Class");
     }*/
 
+
+
     public static void keySet(int i, boolean b) {
         if (i == KeyEvent.VK_UP)
             getKeyState()[UP] = b;

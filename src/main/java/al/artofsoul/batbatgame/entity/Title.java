@@ -27,7 +27,6 @@ public class Title {
     private int width;
 
     public Title(String s) {
-
         try {
             image = ImageIO.read(getClass().getResourceAsStream(s));
             width = image.getWidth();
@@ -36,7 +35,6 @@ public class Title {
         } catch (Exception e) {
             LoggingHelper.LOGGER.log(Level.SEVERE, e.getMessage());
         }
-
     }
 
     public Title(BufferedImage image) {
