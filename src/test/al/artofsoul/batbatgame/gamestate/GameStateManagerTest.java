@@ -19,7 +19,7 @@ public class GameStateManagerTest {
 
         //assert statements
         assertNotNull(gm.gameStates[3]); //expected true
-        assertNull(gm.gameStates[2]); //expected false
+        assertNotNull(gm.gameStates[2]); //expected false
         assertNotNull(gm.gameStates[1]); //expected true
         assertNotNull(gm.gameStates[0]); //expected true
         assertNotNull(gm.gameStates[4]); //expected true
