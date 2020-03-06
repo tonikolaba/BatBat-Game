@@ -46,7 +46,7 @@ public class Player extends MapObject {
     private int maxHealth;
     private int damage;
     private int chargeDamage;
-    private boolean knockback;
+    protected boolean knockback;
     private boolean flinching;
     private long flinchCount;
     private int score;
@@ -56,11 +56,11 @@ public class Player extends MapObject {
     private ArrayList<EnergyParticle> energyParticles;
     private long time;
     // actions
-    private boolean dashing;
-    private boolean attacking;
-    private boolean upattacking;
-    private boolean charging;
-    private int chargingTick;
+    protected boolean dashing;
+    protected boolean attacking;
+    protected boolean upattacking;
+    protected boolean charging;
+    protected int chargingTick;
     private boolean teleporting;
     // animations
     private ArrayList<BufferedImage[]> sprites;
@@ -136,11 +136,11 @@ public class Player extends MapObject {
 
         setAnimation(IDLE_ANIM);
 
-        JukeBox.load("/SFX/playerjump.mp3", PLAYERJUMP_MUSIC_NAME);
+        /*JukeBox.load("/SFX/playerjump.mp3", PLAYERJUMP_MUSIC_NAME);
         JukeBox.load("/SFX/playerlands.mp3", "playerlands");
         JukeBox.load("/SFX/playerattack.mp3", PLAYERATTACK_MUSIC_NAME);
         JukeBox.load("/SFX/playerhit.mp3", "playerhit");
-        JukeBox.load("/SFX/playercharge.mp3", "playercharge");
+        JukeBox.load("/SFX/playercharge.mp3", "playercharge");*/
 
     }
 
@@ -258,8 +258,8 @@ public class Player extends MapObject {
     public void hit(int damage) {
         if (flinching)
             return;
-        JukeBox.play("playerhit");
-        stop();
+        //JukeBox.play("playerhit");
+        //stop();
         health -= damage;
         if (health < 0)
             health = 0;
@@ -286,7 +286,7 @@ public class Player extends MapObject {
         left = right = up = down = flinching = dashing = jumping = attacking = upattacking = charging = false;
     }
 
-    private void getNextPosition() {
+    protected void getNextPosition() {
 
         if (knockback) {
             dy += fallSpeed * 2;
