@@ -57,4 +57,5 @@ public class EnergyParticle extends MapObject {
         return remove;
     }
 
+
 }
