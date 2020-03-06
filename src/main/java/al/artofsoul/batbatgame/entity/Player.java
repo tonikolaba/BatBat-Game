@@ -137,12 +137,12 @@ public class Player extends al.artofsoul.batbatgame.entity.MapObject {
 
         setAnimation(IDLE_ANIM);
 
-
-//        JukeBox.load("/SFX/playerjump.mp3", PLAYERJUMP_MUSIC_NAME);
-//        JukeBox.load("/SFX/playerlands.mp3", "playerlands");
-//        JukeBox.load("/SFX/playerattack.mp3", PLAYERATTACK_MUSIC_NAME);
-//        JukeBox.load("/SFX/playerhit.mp3", "playerhit");
-//        JukeBox.load("/SFX/playercharge.mp3", "playercharge");
+/*
+        JukeBox.load("/SFX/playerjump.mp3", PLAYERJUMP_MUSIC_NAME);
+        JukeBox.load("/SFX/playerlands.mp3", "playerlands");
+        JukeBox.load("/SFX/playerattack.mp3", PLAYERATTACK_MUSIC_NAME);
+        JukeBox.load("/SFX/playerhit.mp3", "playerhit");
+        JukeBox.load("/SFX/playercharge.mp3", "playercharge");*/
 
 
     }

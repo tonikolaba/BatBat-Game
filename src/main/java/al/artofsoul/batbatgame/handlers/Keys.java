@@ -26,9 +26,10 @@ public class Keys {
     private static final boolean[] KEY_STATE = new boolean[NUM_KEYS];
     protected static boolean[] prevKeyState = new boolean[NUM_KEYS];
 
-    public Keys() {
-        //throw new IllegalStateException("Utility Class");
-    }
+   /* protected Keys() {
+        throw new IllegalStateException("Utility Class");
+    }*/
+
 
 
     public static void keySet(int i, boolean b) {
