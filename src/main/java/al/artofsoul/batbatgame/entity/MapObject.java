@@ -10,7 +10,7 @@ import java.awt.*;
  * @author ArtOfSoul
  */
 
-public abstract class MapObject {
+public class MapObject {
 
     // tile stuff
     protected TileMap tileMap;
@@ -130,12 +130,12 @@ public abstract class MapObject {
         xtemp = x;
         ytemp = y;
 
-        checkYCollision();
-
-        checkXCollision();
+//        checkYCollision();
+//
+//        checkXCollision();
 
         if (!falling) {
-            calculateCorners(x, ydest + 1);
+//            calculateCorners(x, ydest + 1);
             if (!bottomLeft && !bottomRight) {
                 falling = true;
             }
