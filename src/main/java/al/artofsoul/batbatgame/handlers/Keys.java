@@ -26,8 +26,8 @@ public class Keys {
     private static final boolean[] KEY_STATE = new boolean[NUM_KEYS];
     private static boolean[] prevKeyState = new boolean[NUM_KEYS];
 
-    private Keys() {
-        throw new IllegalStateException("Utility Class");
+    public Keys() {
+        //throw new IllegalStateException("Utility Class");
     }
 
     public static void keySet(int i, boolean b) {
