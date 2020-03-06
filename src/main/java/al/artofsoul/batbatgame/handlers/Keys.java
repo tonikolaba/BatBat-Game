@@ -24,11 +24,12 @@ public class Keys {
     public static final int ENTER = 8;
     public static final int ESCAPE = 9;
     private static final boolean[] KEY_STATE = new boolean[NUM_KEYS];
-    private static boolean[] prevKeyState = new boolean[NUM_KEYS];
+    protected static boolean[] prevKeyState = new boolean[NUM_KEYS];
 
     public Keys() {
         //throw new IllegalStateException("Utility Class");
     }
+
 
     public static void keySet(int i, boolean b) {
         if (i == KeyEvent.VK_UP)
