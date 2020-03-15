@@ -11,7 +11,7 @@ import java.awt.*;
 
 public class OptionsState extends BasicState {
 
-    final ImageIcon howTo = new ImageIcon(getClass().getResource("/Backgrounds/howTo.gif"));
+    final ImageIcon howTo = new ImageIcon(getClass().getResource("/Backgrounds/Instructions.gif"));
 
     public OptionsState(GameStateManager gsm) {
 
