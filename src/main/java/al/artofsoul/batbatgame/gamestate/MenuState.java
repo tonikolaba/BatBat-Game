@@ -15,7 +15,7 @@ public class MenuState extends BasicState {
     public MenuState(GameStateManager gsm) {
 
         super(gsm);
-        options = new String[]{"Play", "Options", "Quit"};
+        options = new String[]{"Play", "Instructions", "Quit"};
     }
 
     @Override
@@ -23,7 +23,7 @@ public class MenuState extends BasicState {
 
         super.draw(g);
         g.drawString("Play", 140, 133);
-        g.drawString("Options", 140, 148);
+        g.drawString("Instructions", 140, 148);
         g.drawString("Quit", 140, 163);
     }
 
