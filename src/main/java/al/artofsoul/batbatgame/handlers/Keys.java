@@ -17,7 +17,7 @@ public class Keys {
     public static final int LEFT = 1;
     public static final int DOWN = 2;
     public static final int RIGHT = 3;
-    public static final int BUTTON1 = 4;
+    //public static final int BUTTON1 = 4;
     public static final int BUTTON2 = 5;
     public static final int BUTTON3 = 6;
     public static final int BUTTON4 = 7;
@@ -41,11 +41,11 @@ public class Keys {
             getKeyState()[DOWN] = b;
         else if (i == KeyEvent.VK_RIGHT)
             getKeyState()[RIGHT] = b;
-        else if (i == KeyEvent.VK_W)
-            getKeyState()[BUTTON1] = b;
-        else if (i == KeyEvent.VK_E)
+        /*else if (i == KeyEvent.VK_W)
+            getKeyState()[BUTTON1] = b;*/
+        else if (i == KeyEvent.VK_S)
             getKeyState()[BUTTON2] = b;
-        else if (i == KeyEvent.VK_R)
+        else if (i == KeyEvent.VK_D)
             getKeyState()[BUTTON3] = b;
         else if (i == KeyEvent.VK_F)
             getKeyState()[BUTTON4] = b;
