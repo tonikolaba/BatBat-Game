@@ -73,7 +73,7 @@ public abstract class GameState extends BasicState {
         player.setLeft(Keys.getKeyState()[Keys.LEFT]);
         player.setDown(Keys.getKeyState()[Keys.DOWN]);
         player.setRight(Keys.getKeyState()[Keys.RIGHT]);
-        player.setJumping(Keys.getKeyState()[Keys.BUTTON1]);
+        player.setJumping(Keys.getKeyState()[Keys.UP]);
         player.setDashing(Keys.getKeyState()[Keys.BUTTON2]);
         if (Keys.isPressed(Keys.BUTTON3))
             player.setAttacking();
