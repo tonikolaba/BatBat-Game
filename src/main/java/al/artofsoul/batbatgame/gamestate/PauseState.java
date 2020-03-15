@@ -34,13 +34,14 @@ public class PauseState extends GameState {
         g.setColor(Color.WHITE);
         g.setFont(pauseFont);
         g.drawString("Game Paused", 110, 110);
+        g.drawString("Press [Enter] to Exit Game", 80, 140);
     }
 
     @Override
     public void handleInput() {
         if (Keys.isPressed(Keys.ESCAPE))
             gsm.setPaused(false);
-        if (Keys.isPressed(Keys.BUTTON1)) {
+        if (Keys.isPressed(Keys.ENTER)) {
             gsm.setPaused(false);
             gsm.setState(GameStateManager.MENUSTATE);
         }

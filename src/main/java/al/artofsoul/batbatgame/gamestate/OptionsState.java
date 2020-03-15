@@ -11,12 +11,12 @@ import java.awt.*;
 
 public class OptionsState extends BasicState {
 
-    final ImageIcon howTo = new ImageIcon(getClass().getResource("/Backgrounds/howTo.gif"));
+    final ImageIcon howTo = new ImageIcon(getClass().getResource("/Backgrounds/Instructions.gif"));
 
     public OptionsState(GameStateManager gsm) {
 
         super(gsm);
-        options = new String[]{"HowTo Play", "Back"};
+        options = new String[]{"How To Play", "Back"};
     }
 
     @Override
@@ -29,13 +29,13 @@ public class OptionsState extends BasicState {
     public void draw(Graphics2D g) {
 
         super.draw(g);
-        g.drawString("HowTo Play", 140, 133);
+        g.drawString("How To Play", 140, 133);
         g.drawString("Back", 140, 148);
 
     }
 
     public void siLuhet() {
-        JOptionPane.showMessageDialog(null, "", "HowTo Paly?", JOptionPane.INFORMATION_MESSAGE, howTo);
+        JOptionPane.showMessageDialog(null, "", "How To Play?", JOptionPane.INFORMATION_MESSAGE, howTo);
     }
 
     @Override
