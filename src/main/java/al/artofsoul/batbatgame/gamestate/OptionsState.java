@@ -16,7 +16,7 @@ public class OptionsState extends BasicState {
     public OptionsState(GameStateManager gsm) {
 
         super(gsm);
-        options = new String[]{"HowTo Play", "Back"};
+        options = new String[]{"How To Play", "Back"};
     }
 
     @Override
@@ -35,7 +35,7 @@ public class OptionsState extends BasicState {
     }
 
     public void siLuhet() {
-        JOptionPane.showMessageDialog(null, "", "How To Paly?", JOptionPane.INFORMATION_MESSAGE, howTo);
+        JOptionPane.showMessageDialog(null, "", "How To Play?", JOptionPane.INFORMATION_MESSAGE, howTo);
     }
 
     @Override
