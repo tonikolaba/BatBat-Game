@@ -57,6 +57,8 @@ public class Player extends al.artofsoul.batbatgame.entity.MapObject {
     protected long time;
     // actions
     protected boolean dashing;
+    private int getHitLossHp;
+    protected boolean attacking;
 
     protected boolean attacking;
     protected boolean upattacking;
@@ -263,7 +265,7 @@ public class Player extends al.artofsoul.batbatgame.entity.MapObject {
             return;
         //JukeBox.play("playerhit");
         stop();
-
+        getHitLossHp = 60;
         health -= damage;
         if (health < 0)
             health = 0;
@@ -569,10 +571,14 @@ public class Player extends al.artofsoul.batbatgame.entity.MapObject {
         for (int i = 0; i < energyParticles.size(); i++) {
             energyParticles.get(i).draw(g);
         }
-
+       
         // flinch
         if (flinching && !knockback && flinchCount % 10 < 5) {
             return;
+        }
+        if(getHitLossHp > 0){
+            g.drawString("HP-1", 280, 100);
+            getHitLossHp --;
         }
 
         super.draw(g);
