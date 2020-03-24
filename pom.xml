@@ -22,7 +22,7 @@
 	<developers>
 		<developer>
 			<name>tonikolaba</name>
-			<email>tonikolaba@hotmail.com</email>
+			<email>ask_for_it</email>
 			<roles>
 				<role>Project leader/manager</role>
 			</roles>
@@ -47,11 +47,11 @@
 	</properties>
 
 	<dependencies>
-
+		<!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core -->
 		<dependency>
-			<groupId>log4j</groupId>
-			<artifactId>log4j</artifactId>
-			<version>1.2.17</version>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-core</artifactId>
+			<version>2.12.1</version>
 		</dependency>
 		<dependency>
 			<groupId>com.googlecode.soundlibs</groupId>
