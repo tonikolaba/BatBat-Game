@@ -1,24 +1,45 @@
 language: java
-
 sudo: false
 
-jdk:
-  #- oraclejdk9
-  - oraclejdk8
-  #- oraclejdk7
+before_install:
+  - wget https://github.com/sormuras/bach/raw/master/install-jdk.sh
 
+matrix:
+  include:
+# 8
+    - env: JDK='Oracle JDK 8'
+      jdk: oraclejdk8
+    - env: JDK='OpenJDK 8'
+      jdk: openjdk8
+# 9
+    - env: JDK='Oracle JDK 9'
+      jdk: oraclejdk9
+    - env: JDK='OpenJDK 9'
+      install: . ./install-jdk.sh -F 9
+# 10
+    - env: JDK='Oracle JDK 10'
+      jdk: oraclejdk10
+    - env: JDK='OpenJDK 10'
+      install: . ./install-jdk.sh -F 10 -L GPL
+# 11
+    - env: JDK='Oracle JDK 11'
+      install: . ./install-jdk.sh -F 11 -L BCL
+    - env: JDK='OpenJDK 11'
+      install: . ./install-jdk.sh -F 11 -L GPL
+  allow_failures:
+    - env: JDK='Oracle JDK 10'
+
+script:
+  - echo PATH = ${PATH}
+  - echo JAVA_HOME = ${JAVA_HOME}
+  - java -version  
+  
 addons:
   sonarcloud:
     organization: "tonikolaba-github"
     token: $BatBat-Game
 
-script: mvn clean install -DskipTests=true 
-  #-Dmaven.javadoc.skip=true -B -V 
-  #- sudo apt-get update && sudo apt-get install oracle-java8-installer
-  #- java -version
-
 notifications:
   email:
     on_success: never
     on_failure: always
-
