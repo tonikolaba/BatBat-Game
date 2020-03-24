@@ -80,6 +80,18 @@
 	</dependencies>
 
 
+	<profiles>
+		<profile>
+			<id>disable-java8-doclint</id>
+			<activation>
+				<jdk>[1.8,)</jdk>
+			</activation>
+			<properties>
+				<additionalparam>-Xdoclint:none</additionalparam>
+			</properties>
+		</profile>
+	</profiles>
+
 	<build>
 
 		<defaultGoal>clean install</defaultGoal>
@@ -147,22 +159,16 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-javadoc-plugin</artifactId>
-				<version>3.0.0</version>
-				<configuration>
-					<quiet>true</quiet>
-					<failOnError>false</failOnError>
-					<encoding>utf-8</encoding>
-				</configuration>
+				<version>2.9</version>
 				<executions>
 					<execution>
-						<id>attach-javadocs</id>
-						<goals>
-							<goal>jar</goal>
-						</goals>
+						<id>attach-javadocs</id> <!-- The actual id should be apparent from maven output -->
+						<configuration>
+							<additionalparam>${javadoc.opts}</additionalparam>
+						</configuration>
 					</execution>
 				</executions>
 			</plugin>
-			<!-- Produce Sources JAR -->
 			<!-- Produce Sources JAR -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -217,9 +223,9 @@
 						</goals>
 						<configuration>
 							<transformers>
-								<!-- add Main-Class to manifest file    in transformer  implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer"-->
+								<!-- add Main-Class to manifest file in transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer" -->
 								<transformer
-										implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+									implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
 									<mainClass>${mainClass}</mainClass>
 								</transformer>
 							</transformers>
