@@ -11,12 +11,12 @@ jdk:
 addons:
   sonarcloud:
     organization: "tonikolaba-github"
-    token: $BatBat_Game
+    token: $BatBat-Game
 
 script:
   #- sudo apt-get update && sudo apt-get install oracle-java8-installer
   #- java -version
-  - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent package sonar:sonar 
+  - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V 
 
 
 

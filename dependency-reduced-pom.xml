@@ -153,20 +153,6 @@
           </execution>
         </executions>
       </plugin>
-      <plugin>
-        <groupId>com.versioneye</groupId>
-        <artifactId>versioneye-maven-plugin</artifactId>
-        <version>3.11.4</version>
-        <configuration>
-          <propertiesPath>${basedir}/versioneye.properties</propertiesPath>
-          <apiKey>2cb0e33d5f775d2b8e78</apiKey>
-          <organisation>artofsoul</organisation>
-          <name>artofsoul</name>
-          <visibility>TrueOrFalse</visibility>
-          <transitiveDependencies>true</transitiveDependencies>
-          <team>artofsoul</team>
-        </configuration>
-      </plugin>
     </plugins>
   </build>
   <profiles>
