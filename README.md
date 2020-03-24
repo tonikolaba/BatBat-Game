@@ -3,9 +3,10 @@
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/e9e43be11a8a4ca68a9186507060147c)](https://www.codacy.com/app/tonikolaba/BatBat-Game?utm_source=github.com&utm_medium=referral&utm_content=tonikolaba/BatBat-Game&utm_campaign=badger)
 [![AppVeyor Build status](https://ci.appveyor.com/api/projects/status/bj4gqn3gp3gu45sa?svg=true)](https://ci.appveyor.com/project/tonikolaba/batbat-game/ "AppVeyor Build status")
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=al.artofsoul.batbatgame%3ABatBat-Game&metric=alert_status)](https://sonarcloud.io/dashboard?id=al.artofsoul.batbatgame%3ABatBat-Game)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/tonikolaba/BatBat-Game/master/License.md)
 [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=RHVZBCA4W9XD6&source=url)
-[![Twitter](https://img.shields.io/twitter/url/https/github.com/tonikolaba/BatBat-Game/.svg?style=social)](https://twitter.com/intent/tweet?text=%23BatBat%20%23Game%20??%20??%20is%20a%20free%20and%20fun%20java%20game%2E%20Developer%20%40tonikolaba)
+[![Twitter](https://img.shields.io/twitter/url/https/github.com/tonikolaba/BatBat-Game/.svg?style=social)](https://twitter.com/intent/tweet?text%23BatBat%20%23Game%20??%20??%20is%20a%20free%20and%20fun%20java%20game%2E%20Developer%20%40tonikolaba)
 
 ----------
 
@@ -58,10 +59,10 @@ As Java Project:
 
 ## Author
 
-<link href="https://fonts.googleapis.com/css?family=Cookie" rel="stylesheet"><a class="bmc-button" target="_blank" href="https://www.buymeacoffee.com/uHJSYPX"><img src="https://cdn.buymeacoffee.com/buttons/bmc-new-btn-logo.svg" alt="Buy me a coffee"><span style="margin-left:15px;font-size:28px !important;">Buy me a coffee</span></a>
+> :pencil: :book: :ballot_box_with_check: 
 
-:pencil: :book: :ballot_box_with_check: :copyright:
+<a href="https://www.buymeacoffee.com/uHJSYPX" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" style="height: 51px !important;width: 217px !important;" ></a>
 
-*with :heart:* - **[tonikolaba](https://github.com/tonikolaba)** :copyright:
+*with :heart:* by **[tonikolaba](https://github.com/tonikolaba)** :copyright: 
 
 ![Alt text](https://github.com/tonikolaba/download/blob/master/info/artofsoullogoNewVOG.png)

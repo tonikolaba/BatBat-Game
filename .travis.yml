@@ -1,24 +1,21 @@
 language: java
 
-sudo: required
+sudo: false
 
 jdk:
   #- oraclejdk9
   - oraclejdk8
   #- oraclejdk7
 
-
 addons:
   sonarcloud:
     organization: "tonikolaba-github"
     token: $BatBat-Game
 
-script:
+script: mvn clean install -DskipTests=true 
+  #-Dmaven.javadoc.skip=true -B -V 
   #- sudo apt-get update && sudo apt-get install oracle-java8-installer
   #- java -version
-  - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V 
-
-
 
 notifications:
   email:
