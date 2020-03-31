@@ -47,8 +47,8 @@
         <artifactId>maven-compiler-plugin</artifactId>
         <version>3.7.0</version>
         <configuration>
-          <source>13</source>
-          <target>13</target>
+          <source>1.8</source>
+          <target>1.8</target>
           <encoding>UTF-8</encoding>
         </configuration>
       </plugin>
@@ -164,9 +164,9 @@
     </profile>
   </profiles>
   <properties>
-    <maven.compiler.target>13</maven.compiler.target>
+    <maven.compiler.target>1.8</maven.compiler.target>
     <mainClass>al.artofsoul.batbatgame.main.Game</mainClass>
-    <maven.compiler.source>13</maven.compiler.source>
+    <maven.compiler.source>1.8</maven.compiler.source>
     <maven.build.timestamp.format>yyyy-MM-dd HH:mm</maven.build.timestamp.format>
     <timestamp>${maven.build.timestamp}</timestamp>
   </properties>
