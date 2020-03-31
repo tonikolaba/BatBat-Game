@@ -1,48 +1,33 @@
-sudo: false
-dist: trusty
 language: java
-
-before_install:
-  - wget https://github.com/sormuras/bach/raw/master/install-jdk.sh
-
-matrix:
-  include:
-# 8
-    - env: JDK='Oracle JDK 8'
-      jdk: oraclejdk8
-    - env: JDK='OpenJDK 8'
-      jdk: openjdk8
-# 9
-    - env: JDK='Oracle JDK 9'
-      jdk: oraclejdk9
-    - env: JDK='OpenJDK 9'
-      install: . ./install-jdk.sh -F 9
-# 10
-    - env: JDK='Oracle JDK 10'
-      jdk: oraclejdk10
-    - env: JDK='OpenJDK 10'
-      install: . ./install-jdk.sh -F 10 -L GPL
-# 11
-    - env: JDK='Oracle JDK 11'
-      install: . ./install-jdk.sh -F 11 -L BCL
-    - env: JDK='OpenJDK 11'
-      install: . ./install-jdk.sh -F 11 -L GPL
-  allow_failures:
-    - env: JDK='Oracle JDK 10'
-
-
-script:
-  - echo PATH = ${PATH}
-  - echo JAVA_HOME = ${JAVA_HOME}
-  - java -version  
-  - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent package sonar:sonar 
-  
-addons:
-  sonarcloud:
-    organization: "tonikolaba-github"
-    token: $BatBat-Game
+os: windows
+sudo: false
+#dist: trusty
 
 notifications:
   email:
     on_success: never
     on_failure: always
+
+addons:
+  sonarcloud:
+    enabled: true    
+    organization: "tonikolaba-github"
+    token: 
+        secure: encrypted 36f51fa745413db289321cc69597e068ac6dcb54
+    github_token:
+        secure: encrypted d4a88a26b6214799b25d12778484e2fccc412d7e
+
+
+script:
+  - sudo apt-get update && sudo apt-get install oracle-java8-installer
+  - java -version
+  - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent package sonar:sonar -Dsonar.host.url=https://sonarcloud.io -Dsonar.organization=-Dsonar.organiz
+ation=tonikolaba-github -Dsonar.login=36f51fa745413db289321cc69597e068ac6dcb54 -Dsonar.branch=master
+  - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent package sonar:sonar 
+
+
+
+jdk:
+  - oraclejdk8
+  - oraclejdk9
+  - openjdk8
