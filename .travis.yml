@@ -1,7 +1,12 @@
 language: java
 os: windows
-sudo: false
+#sudo: false
 #dist: trusty
+
+jdk:
+  - oraclejdk8
+  - oraclejdk9
+  - openjdk8
 
 notifications:
   email:
@@ -12,22 +17,10 @@ addons:
   sonarcloud:
     enabled: true    
     organization: "tonikolaba-github"
-    token: 
-        secure: encrypted 36f51fa745413db289321cc69597e068ac6dcb54
-    github_token:
-        secure: encrypted d4a88a26b6214799b25d12778484e2fccc412d7e
-
 
 script:
   - sudo apt-get update && sudo apt-get install oracle-java8-installer
   - java -version
-  - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent package sonar:sonar -Dsonar.host.url=https://sonarcloud.io -Dsonar.organization=-Dsonar.organiz
-ation=tonikolaba-github -Dsonar.login=36f51fa745413db289321cc69597e068ac6dcb54 -Dsonar.branch=master
+  - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent package sonar:sonar -Dsonar.host.url=https://sonarcloud.io -Dsonar.organization=-Dsonar.organization=tonikolaba-github -Dsonar.login=d4a88a26b6214799b25d12778484e2fccc412d7e -Dsonar.branch=master
   - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent package sonar:sonar 
 
-
-
-jdk:
-  - oraclejdk8
-  - oraclejdk9
-  - openjdk8
