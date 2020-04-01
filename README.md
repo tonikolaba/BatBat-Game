@@ -1,6 +1,6 @@
 ![Alt text](https://github.com/tonikolaba/download/blob/master/Windows/BatBat%20Game/BatBat.jpg)
 ===================
-----------
+
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/e9e43be11a8a4ca68a9186507060147c)](https://www.codacy.com/app/tonikolaba/BatBat-Game?utm_source=github.com&utm_medium=referral&utm_content=tonikolaba/BatBat-Game&utm_campaign=badger)
 [![AppVeyor Build status](https://ci.appveyor.com/api/projects/status/bj4gqn3gp3gu45sa?svg=true)](https://ci.appveyor.com/project/tonikolaba/batbat-game/ "AppVeyor Build status")
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=al.artofsoul.batbatgame%3ABatBat-Game&metric=alert_status)](https://sonarcloud.io/dashboard?id=al.artofsoul.batbatgame%3ABatBat-Game)
@@ -55,7 +55,6 @@ As Java Project:
 * **MP3SPI**  :heavy_check_mark:
 * **Tritonus**  :heavy_check_mark:
 
-version upgraded from Java: 1.8 to 1.3 :heavy_check_mark:
 
 | Language| Version | Upgrade |  | 
 | ------ | ------ | ------ | ------ 

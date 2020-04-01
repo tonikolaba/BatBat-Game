@@ -6,19 +6,16 @@
 	<groupId>al.artofsoul.batbatgame</groupId>
 	<artifactId>BatBat-Game</artifactId>
 	<version>1.0-SNAPSHOT</version>
-
 	<name>BatBat-Game</name>
+	<packaging>jar</packaging>
 	<url>http://www.github.com/tonikolaba/BatBat-Game</url>
 	<description>A small platform game tutorial top build a basic Framework over the sample game, and extract useful
 		mechanism.
 	</description>
-
-
 	<inceptionYear>2017</inceptionYear>
 	<organization>
 		<name>tonikolaba</name>
 	</organization>
-
 	<developers>
 		<developer>
 			<name>tonikolaba</name>
@@ -37,7 +34,6 @@
 			</roles>
 		</contributor>
 	</contributors>
-
 	<properties>
 		<maven.compiler.target>1.8</maven.compiler.target>
 		<maven.compiler.source>1.8</maven.compiler.source>
@@ -45,7 +41,6 @@
 		<maven.build.timestamp.format>yyyy-MM-dd HH:mm</maven.build.timestamp.format>
 		<mainClass>al.artofsoul.batbatgame.main.Game</mainClass>
 	</properties>
-
 	<dependencies>
 		<!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core -->
 		<dependency>
@@ -79,8 +74,6 @@
 			<version>3.4.0.905</version>
 		</dependency>
 	</dependencies>
-
-
 	<profiles>
 		<profile>
 			<id>disable-java8-doclint</id>
@@ -92,32 +85,26 @@
 			</properties>
 		</profile>
 	</profiles>
-
 	<build>
-
+		<finalName>BatBat Game</finalName>
 		<defaultGoal>clean install</defaultGoal>
 		<sourceDirectory>src</sourceDirectory>
-
 		<resources>
 			<resource>
 				<directory>./Resources</directory>
 			</resource>
 		</resources>
-
 		<plugins>
-
-
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.7.0</version>
 				<configuration>
-					<source>1.8</source>
-					<target>1.8</target>
+					<source>${maven.compiler.source}</source>
+					<target>${maven.compiler.target}</target>
 					<encoding>UTF-8</encoding>
 				</configuration>
 			</plugin>
-
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-resources-plugin</artifactId>
@@ -126,8 +113,6 @@
 					<encoding>UTF-8</encoding>
 				</configuration>
 			</plugin>
-
-
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-dependency-plugin</artifactId>
@@ -135,7 +120,7 @@
 				<executions>
 					<execution>
 						<id>copy-dependencies</id>
-						<phase>package</phase>
+						<phase>prepare-package</phase>
 						<goals>
 							<goal>copy-dependencies</goal>
 						</goals>
@@ -200,6 +185,7 @@
 						<index>true</index>
 						<manifest>
 							<addClasspath>true</addClasspath>
+							<classpathPrefix>${project.build.finalName}.lib/</classpathPrefix>
 							<mainClass>${mainClass}</mainClass>
 						</manifest>
 						<manifestEntries>
@@ -210,26 +196,29 @@
 					</archive>
 				</configuration>
 			</plugin>
-
 			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-shade-plugin</artifactId>
-				<version>2.3</version>
+				<!-- NOTE: We don't need a groupId specification because the group is 
+					org.apache.maven.plugins ...which is assumed by default. -->
+				<artifactId>maven-assembly-plugin</artifactId>
+				<version>3.2.0</version>
 				<executions>
-					<!-- Run shade goal on package phase -->
 					<execution>
+						<id>make-jar</id>
 						<phase>package</phase>
 						<goals>
-							<goal>shade</goal>
+							<goal>single</goal>
 						</goals>
 						<configuration>
-							<transformers>
-								<!-- add Main-Class to manifest file in transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer" -->
-								<transformer
-									implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+							<archive>
+								<manifest>
 									<mainClass>${mainClass}</mainClass>
-								</transformer>
-							</transformers>
+								</manifest>
+							</archive>
+							<descriptorRefs>
+								<descriptorRef>jar-with-dependencies</descriptorRef>
+							</descriptorRefs>
+							<finalName>BatBat Game-final</finalName>
+							<appendAssemblyId>false</appendAssemblyId>
 						</configuration>
 					</execution>
 				</executions>
