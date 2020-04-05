@@ -16,7 +16,7 @@ public class GameStateManager {
 	public static final int LEVEL2STATE = 3;
 	public static final int LEVEL3STATE = 4;
 	public static final int LEVEL4STATE = 5;
-	public static final int LEVELTEST = 6;
+	//public static final int LEVELTEST = 6;
 	public static final int HOWTOPLAY = 7;
 	public static final int ACIDSTATE = 15;
 	private BasicState[] gameStates;
@@ -53,8 +53,8 @@ public class GameStateManager {
 			gameStates[state] = new Level3State(this);
 		else if (state == LEVEL4STATE)
 			gameStates[state] = new Level4State(this);
-		else if (state == LEVELTEST)
-			gameStates[state] = new LevelTest(this);
+		//else if (state == LEVELTEST)
+			//gameStates[state] = new LevelTest(this);
 		else if (state == ACIDSTATE)
 			gameStates[state] = new AcidState(this);
 	}
