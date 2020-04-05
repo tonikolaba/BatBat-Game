@@ -1,51 +1,72 @@
 package al.artofsoul.batbatgame.gamestate;
 
-import al.artofsoul.batbatgame.audio.JukeBox;
+import java.awt.Graphics2D;
 
-import javax.swing.*;
-import java.awt.*;
+import al.artofsoul.batbatgame.audio.JukeBox;
+import al.artofsoul.batbatgame.handlers.Keys;
 
 /**
- * @author ArtOfSoul
+ * @author N.Kolaba
  */
 
 public class OptionsState extends BasicState {
 
-    final ImageIcon howTo = new ImageIcon(getClass().getResource("/Backgrounds/howTo.gif"));
+	public OptionsState(GameStateManager gsm) {
 
-    public OptionsState(GameStateManager gsm) {
+		super(gsm);
+		options = new String[] { "HowTo Play", "Language", "Back" };
+	}
 
-        super(gsm);
-        options = new String[]{"HowTo Play", "Back"};
-    }
+	@Override
+	public void update() {
+		// check keys
+		handleInput();
+	}
 
-    @Override
-    public void update() {
-        // check keys
-        handleInput();
-    }
+	@Override
+	public void draw(Graphics2D g) {
 
-    @Override
-    public void draw(Graphics2D g) {
+		super.draw(g);
+		g.drawString("HowTo Play", 140, 133);
+		g.drawString("Language", 140, 148);
+		g.drawString("Back", 140, 163);
 
-        super.draw(g);
-        g.drawString("HowTo Play", 140, 133);
-        g.drawString("Back", 140, 148);
+	}
 
-    }
+	@Override
+	protected void select() {
+		switch (currentChoice) {
+		case 0:
+			JukeBox.play("menuselect");
+			// PlayerSave.init();
+			gsm.setState(GameStateManager.HOWTOPLAY); /// start this level entrance
+			break;
+		case 1:
+			JukeBox.play("menuselect");
+			gsm.setState(GameStateManager.OPTIONSSTATE);
+			break;
+		case 2:
+			JukeBox.play("menuselect");
+			gsm.setState(GameStateManager.MENUSTATE);
+			break;
+		default:
+			System.exit(0);
+			break;
+		}
+	}
 
-    public void siLuhet() {
-        JOptionPane.showMessageDialog(null, "", "HowTo Paly?", JOptionPane.INFORMATION_MESSAGE, howTo);
-    }
+	@Override
+	public void handleInput() {
+		if (Keys.isPressed(Keys.ENTER))
+			select();
+		if (Keys.isPressed(Keys.UP) && currentChoice > 0) {
+			JukeBox.play("menuoption", 0);
+			currentChoice--;
+		}
+		if (Keys.isPressed(Keys.DOWN) && currentChoice < options.length - 1) {
+			JukeBox.play("menuoption", 0);
+			currentChoice++;
+		}
 
-    @Override
-    protected void select() {
-        if (currentChoice == 0) {
-            JukeBox.play("menuselect");
-            siLuhet();
-        } else {
-            gsm.setState(GameStateManager.MENUSTATE);
-        }
-    }
-
+	}
 }

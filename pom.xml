@@ -74,6 +74,7 @@
 			<version>3.4.0.905</version>
 		</dependency>
 	</dependencies>
+
 	<profiles>
 		<profile>
 			<id>disable-java8-doclint</id>
@@ -203,7 +204,7 @@
 				<version>3.2.0</version>
 				<executions>
 					<execution>
-						<id>make-jar</id>
+						<id>BatBat-Game-jar</id>
 						<phase>package</phase>
 						<goals>
 							<goal>single</goal>
