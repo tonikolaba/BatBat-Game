@@ -13,10 +13,7 @@ import al.artofsoul.batbatgame.handlers.Keys;
 public class HowtoPlay extends BasicState {
 
 	public HowtoPlay(GameStateManager gsm) {
-
 		super(gsm);
-		options = new String[] { "< > - MOVE LEFT-RIGHT ", "W - JUMP UP", "R - SINGLE SHOOT", "W+R - JUMP & HIT",
-				"F - BIG SHOOT", "MENU" };
 	}
 
 	@Override
@@ -24,12 +21,15 @@ public class HowtoPlay extends BasicState {
 		super.draw(h);
 		h.setFont(font);
 		h.setColor(Color.YELLOW);
-		h.drawString("< > - MOVE LEFT-RIGHT ", 140, 133);
-		h.drawString("W - JUMP UP", 140, 148);
-		h.drawString("R - SINGLE SHOOT", 140, 163);
-		h.drawString("W+R - JUMP & HIT", 140, 178);
-		h.drawString("F - BIG SHOOT", 140, 193);
-		h.drawString("MENU", 140, 208);
+		h.fillRect(90, 70, 140, 140); // Fills a square
+		h.setColor(Color.RED);
+		h.drawString("< > - MOVE LEFT-RIGHT", 100, 100);
+		h.drawString(" W + R  -  JUMP & HIT ", 100, 115);
+		h.drawString(" R  -   SINGLE SHOOT ", 100, 130);
+		h.drawString(" F -  BIG SHOOT ", 100, 145);
+		h.drawString(" W -  JUMP UP ", 100, 160);
+		h.setFont(font2);
+		h.drawString(" * any key to go Back ", 110, 185);
 	}
 
 	@Override
@@ -37,32 +37,11 @@ public class HowtoPlay extends BasicState {
 		switch (currentChoice) {
 		case 0:
 			JukeBox.play("menuselect");
-			gsm.setState(GameStateManager.HOWTOPLAY);
-			break;
-		case 1:
-			JukeBox.play("menuselect");
-			gsm.setState(GameStateManager.HOWTOPLAY);
-			break;
-		case 2:
-			JukeBox.play("menuselect");
-			gsm.setState(GameStateManager.HOWTOPLAY);
-			break;
-		case 3:
-			JukeBox.play("menuselect");
-			gsm.setState(GameStateManager.HOWTOPLAY);
-			break;
-		case 4:
-			JukeBox.play("menuselect");
-			gsm.setState(GameStateManager.HOWTOPLAY);
-			break;
-		case 5:
-			JukeBox.play("menuselect");
-			// PlayerSave.init();
-			gsm.setState(GameStateManager.MENUSTATE);
+			gsm.setState(GameStateManager.OPTIONSSTATE);
 			break;
 		default:
 			JukeBox.play("menuselect");
-			gsm.setState(GameStateManager.HOWTOPLAY);
+			gsm.setState(GameStateManager.OPTIONSSTATE);
 			break;
 		}
 	}
@@ -73,11 +52,8 @@ public class HowtoPlay extends BasicState {
 			select();
 		if (Keys.isPressed(Keys.UP) && currentChoice > 0) {
 			JukeBox.play("menuoption", 0);
+			gsm.setState(GameStateManager.MENUSTATE);
 			currentChoice--;
-		}
-		if (Keys.isPressed(Keys.DOWN) && currentChoice < options.length - 1) {
-			JukeBox.play("menuoption", 0);
-			currentChoice++;
 		}
 
 	}

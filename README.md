@@ -36,6 +36,7 @@ BatBat Game can easy be Fork on you IDE just follow the steps:
 
 #### :bookmark_tabs: **If you want to play the game on Windows, Linux, Mac OS the setup file can be found on [GameJolt](http://gamejolt.com/games/BatBat-Game/264212) and any other information for any error or problem.** 
 
+> :bulb: :sparkler: :pencil: :book: :computer: :battery: :ballot_box_with_check:
 
 Simply!
  
@@ -57,9 +58,9 @@ As Java Project:
 * **Tritonus**  :heavy_check_mark:
 
 ## Author
-
-> :bulb: :sparkler: :pencil: :book: :computer: :battery: :ballot_box_with_check: 
+ 
 
 *:octocat: with :heart: by* **[tonikolaba](https://github.com/tonikolaba)** *:copyright:* 
+
 
 ![Alt text](https://github.com/tonikolaba/download/blob/master/info/artofsoullogoNewVOG.png)

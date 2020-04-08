@@ -12,7 +12,6 @@ import al.artofsoul.batbatgame.handlers.Keys;
 public class OptionsState extends BasicState {
 
 	public OptionsState(GameStateManager gsm) {
-
 		super(gsm);
 		options = new String[] { "HowTo Play", "Language", "Back" };
 	}
@@ -25,12 +24,11 @@ public class OptionsState extends BasicState {
 
 	@Override
 	public void draw(Graphics2D g) {
-
 		super.draw(g);
+		g.drawRect(75, 90, 155, 100); // Fills a square
 		g.drawString("HowTo Play", 140, 133);
 		g.drawString("Language", 140, 148);
 		g.drawString("Back", 140, 163);
-
 	}
 
 	@Override
@@ -38,8 +36,7 @@ public class OptionsState extends BasicState {
 		switch (currentChoice) {
 		case 0:
 			JukeBox.play("menuselect");
-			// PlayerSave.init();
-			gsm.setState(GameStateManager.HOWTOPLAY); /// start this level entrance
+			gsm.setState(GameStateManager.HOWTOPLAY);
 			break;
 		case 1:
 			JukeBox.play("menuselect");
@@ -50,7 +47,7 @@ public class OptionsState extends BasicState {
 			gsm.setState(GameStateManager.MENUSTATE);
 			break;
 		default:
-			System.exit(0);
+			gsm.setState(GameStateManager.MENUSTATE);
 			break;
 		}
 	}

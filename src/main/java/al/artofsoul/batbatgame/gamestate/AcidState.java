@@ -1,61 +1,66 @@
 package al.artofsoul.batbatgame.gamestate;
 
-import al.artofsoul.batbatgame.handlers.Keys;
-import al.artofsoul.batbatgame.handlers.LoggingHelper;
-import al.artofsoul.batbatgame.main.GamePanel;
+import java.awt.Color;
+import java.awt.Graphics2D;
 
-import javax.imageio.ImageIO;
-import java.awt.*;
-import java.awt.geom.AffineTransform;
-import java.awt.image.BufferedImage;
-import java.util.logging.Level;
+import al.artofsoul.batbatgame.audio.JukeBox;
+import al.artofsoul.batbatgame.handlers.Keys;
 
 /**
- * @author ArtOfSoul
+ * @author N.Kolaba
  */
 
-public class AcidState extends GameState {
+public class AcidState extends BasicState {
 
-    private float hue;
-    private Color color;
+	public AcidState(GameStateManager gsm) {
+		super(gsm);
+	}
 
-    private double angle;
-    private BufferedImage image;
+	@Override
+	public void update() {
+		handleInput();
+	}
 
-    public AcidState(GameStateManager gsm) {
-        super(gsm);
-        try {
-            image = ImageIO.read(getClass().getResourceAsStream("/Sprites/Player/PlayerSprites.gif")).getSubimage(0, 0,
-                    40, 40);
-        } catch (Exception e) {
-            LoggingHelper.LOGGER.log(Level.SEVERE, e.getMessage());
-        }
-    }
+	@Override
+	public void draw(Graphics2D g) {
+		super.draw(g);
+		g.setFont(font);
+		g.setColor(Color.GRAY);
+		g.fillOval(85, 65, 150, 150); // draw a cycle OK
+		g.drawOval(80, 60, 160, 160); // draw a cycle
+		g.drawRect(85, 65, 150, 150); // draw a square Katerori
+		g.setColor(Color.WHITE);
+		g.fillOval(90, 70, 140, 140); // Fills a square
+		g.setColor(Color.DARK_GRAY);
+		g.fillOval(95, 75, 130, 130);
+		g.setColor(Color.GREEN);
+		g.drawString("Congratulation!", 120, 133);
+		g.setFont(font2);
+		g.drawString("Press any key to Play Again", 100, 148);
+	}
 
-    @Override
-    public void update() {
-        handleInput();
-        color = Color.getHSBColor(hue, 1f, 1f);
-        hue += 0.01;
-        if (hue > 1)
-            hue = 0;
-        angle += 0.1;
-    }
+	@Override
+	protected void select() {
+		switch (currentChoice) {
+		case 0:
+			JukeBox.play("menuselect");
+			gsm.setState(GameStateManager.MENUSTATE);
+			break;
+		default:
+			JukeBox.play("menuselect");
+			gsm.setState(GameStateManager.MENUSTATE);
+			break;
+		}
+	}
 
-    @Override
-    public void draw(Graphics2D g) {
-        g.setColor(color);
-        g.fillRect(0, 0, GamePanel.WIDTH, GamePanel.HEIGHT);
-        AffineTransform at = new AffineTransform();
-        at.translate(GamePanel.WIDTH / 2.0, GamePanel.HEIGHT / 2.0);
-        at.rotate(angle);
-        g.drawImage(image, at, null);
-    }
-
-    @Override
-    public void handleInput() {
-        if (Keys.isPressed(Keys.ESCAPE))
-            gsm.setState(GameStateManager.MENUSTATE);
-    }
-
+	@Override
+	public void handleInput() {
+		if (Keys.isPressed(Keys.ENTER))
+			select();
+		if (Keys.isPressed(Keys.UP) && currentChoice > 0) {
+			JukeBox.play("menuoption", 0);
+			gsm.setState(GameStateManager.MENUSTATE);
+			currentChoice--;
+		}
+	}
 }
