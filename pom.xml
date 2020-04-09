@@ -35,6 +35,7 @@
 		</contributor>
 	</contributors>
 	<properties>
+		<jdkVersion>1.8</jdkVersion>
 		<maven.compiler.target>1.8</maven.compiler.target>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<timestamp>${maven.build.timestamp}</timestamp>
@@ -76,14 +77,14 @@
 			</properties>
 		</profile>
 		<profile>
-			<id>BatBat-Game-test</id>
+			<id>BatBat-Game</id>
 			<build>
 				<plugins>
 					<plugin>
 						<groupId>com.heroku.sdk</groupId>
 						<artifactId>heroku-maven-plugin</artifactId>
 						<configuration>
-							<appName>BatBat-Game-test</appName>
+							<appName>BatBat-Game</appName>
 						</configuration>
 					</plugin>
 				</plugins>
@@ -231,17 +232,7 @@
 			<plugin>
 				<groupId>com.heroku.sdk</groupId>
 				<artifactId>heroku-maven-plugin</artifactId>
-				<configuration>
-					<appName>BatBat-Game</appName>
-					<processTypes>
-						<web>java $JAVA_OPTS -cp target/classes:target/dependency/*
-							al.artofsoul.batbatgame.main.BatBatGame</web>
-					</processTypes>
-				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>com.heroku.sdk</groupId>
-				<artifactId>heroku-maven-plugin</artifactId>
+				<version>3.0.2</version>
 				<configuration>
 					<processTypes>
 						<web>java $JAVA_OPTS -cp target/classes:target/dependency/*
