@@ -1,1 +1,1 @@
-web: java -jar target/BatBat-Game.jar target/*.war
+web: java $JAVA_OPTS -jar target/BatBat-Game.jar --port $PORT target/*.war
