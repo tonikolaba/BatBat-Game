@@ -75,6 +75,20 @@
 				<additionalparam>-Xdoclint:none</additionalparam>
 			</properties>
 		</profile>
+		<profile>
+			<id>BatBat-Game-test</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>com.heroku.sdk</groupId>
+						<artifactId>heroku-maven-plugin</artifactId>
+						<configuration>
+							<appName>BatBat-Game-test</appName>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
 	</profiles>
 	<build>
 		<finalName>BatBat Game</finalName>
@@ -217,12 +231,22 @@
 			<plugin>
 				<groupId>com.heroku.sdk</groupId>
 				<artifactId>heroku-maven-plugin</artifactId>
-				<version>3.0.2</version>
 				<configuration>
 					<appName>BatBat-Game</appName>
-				        <processTypes>
-                            <web>java $JAVA_OPTS -cp target/classes:target/dependency/* al.artofsoul.batbatgame.main.BatBatGame</web>
-				        </processTypes>
+					<processTypes>
+						<web>java $JAVA_OPTS -cp target/classes:target/dependency/*
+							al.artofsoul.batbatgame.main.BatBatGame</web>
+					</processTypes>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>com.heroku.sdk</groupId>
+				<artifactId>heroku-maven-plugin</artifactId>
+				<configuration>
+					<processTypes>
+						<web>java $JAVA_OPTS -cp target/classes:target/dependency/*
+							al.artofsoul.batbatgame.main.BatBatGame</web>
+					</processTypes>
 				</configuration>
 			</plugin>
 		</plugins>
