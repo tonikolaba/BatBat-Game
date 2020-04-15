@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Created-By: Apache Maven ${maven.version}
+Built-By: ${user.name}
+Build-Jdk: ${java.version}
+Spring-Boot-Classes: target/classes/
+Spring-Boot-Lib: target/lib/
+Spring-Boot-Version: 2.2.6.RELEASE
+Start-Class: al.artofsoul.batbatgame.main.BatBatGame
+Main-Class: al.artofsoul.batbatgame.main.BatBat

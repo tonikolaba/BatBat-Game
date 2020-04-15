@@ -1,3 +1,7 @@
+/** Copyright to N.Kolaba
+All rights reserved ©.
+**/
+
 package al.artofsoul.batbatgame.gamestate;
 
 import java.awt.Graphics2D;
@@ -64,6 +68,5 @@ public class OptionsState extends BasicState {
 			JukeBox.play("menuoption", 0);
 			currentChoice++;
 		}
-
 	}
 }

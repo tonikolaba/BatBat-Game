@@ -1,3 +1,7 @@
+/** Copyright to N.Kolaba
+All rights reserved ©.
+**/
+
 package al.artofsoul.batbatgame.gamestate;
 
 import java.awt.Graphics2D;
@@ -7,7 +11,7 @@ import al.artofsoul.batbatgame.entity.PlayerSave;
 import al.artofsoul.batbatgame.handlers.Keys;
 
 /**
- * @author ArtOfSoul
+ * @author tonikolaba
  */
 
 public class MenuState extends BasicState {

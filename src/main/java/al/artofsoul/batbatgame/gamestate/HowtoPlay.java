@@ -1,3 +1,7 @@
+/** Copyright to N.Kolaba
+All rights reserved ©.
+**/
+
 package al.artofsoul.batbatgame.gamestate;
 
 import java.awt.Color;

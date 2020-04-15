@@ -57,10 +57,10 @@ As Java Project:
 * **MP3SPI**  :heavy_check_mark:
 * **Tritonus**  :heavy_check_mark:
 
+## Author
 ![Alt text](https://github.com/tonikolaba/download/blob/master/info/artofsoullogoNewVOG.png)
 
-## Author
- 
+
 *:octocat: with :heart: by* **[tonikolaba](https://github.com/tonikolaba)** *:copyright:* 
 
 

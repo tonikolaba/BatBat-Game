@@ -1,6 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns="http://maven.apache.org/POM/4.0.0"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.2.6.RELEASE</version>
+		<relativePath /> <!-- lookup parent from repository -->
+	</parent>
 
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>al.artofsoul.batbatgame</groupId>
@@ -40,14 +48,25 @@
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<timestamp>${maven.build.timestamp}</timestamp>
 		<maven.build.timestamp.format>yyyy-MM-dd HH:mm</maven.build.timestamp.format>
+		<!-- Spring boot main class -->
+		<start-class>al.artofsoul.batbatgame.main.BatBat</start-class>
 		<mainClass>al.artofsoul.batbatgame.main.BatBatGame</mainClass>
 	</properties>
 	<dependencies>
+		<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-loader -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-tomcat</artifactId>
+			<scope>compile</scope>
+		</dependency>
 		<!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core -->
 		<dependency>
 			<groupId>org.apache.logging.log4j</groupId>
 			<artifactId>log4j-core</artifactId>
-			<version>2.12.1</version>
 		</dependency>
 		<dependency>
 			<groupId>com.googlecode.soundlibs</groupId>
@@ -92,7 +111,7 @@
 		</profile>
 	</profiles>
 	<build>
-		<finalName>BatBat Game</finalName>
+		<finalName>BatBat-Game</finalName>
 		<defaultGoal>clean install</defaultGoal>
 		<sourceDirectory>src</sourceDirectory>
 		<resources>
@@ -102,19 +121,28 @@
 		</resources>
 		<plugins>
 			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.7.0</version>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
+					<mainClass>${start-class}</mainClass>
 					<source>${maven.compiler.source}</source>
 					<target>${maven.compiler.target}</target>
 					<encoding>UTF-8</encoding>
+					<layout>WAR</layout>
+					<executable>true</executable>
+					<addResources>true</addResources>
 				</configuration>
+				<executions>
+					<execution>
+						<goals>
+							<goal>repackage</goal>
+						</goals>
+					</execution>
+				</executions>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-resources-plugin</artifactId>
-				<version>3.0.2</version>
 				<configuration>
 					<encoding>UTF-8</encoding>
 				</configuration>
@@ -122,15 +150,17 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-dependency-plugin</artifactId>
-				<version>3.0.2</version>
 				<executions>
 					<execution>
 						<id>copy-dependencies</id>
-						<phase>prepare-package</phase>
+						<phase>package</phase>
 						<goals>
 							<goal>copy-dependencies</goal>
 						</goals>
 						<configuration>
+							<outputDirectory>
+								${project.build.directory}/dependency-jars/
+							</outputDirectory>
 							<artifactItems>
 								<artifactItem>
 									<groupId>com.heroku</groupId>
@@ -151,7 +181,6 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-javadoc-plugin</artifactId>
-				<version>2.9</version>
 				<executions>
 					<execution>
 						<id>attach-javadocs</id> <!-- The actual id should be apparent from maven output -->
@@ -165,7 +194,6 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-source-plugin</artifactId>
-				<version>3.0.1</version>
 				<configuration>
 					<excludes>
 						<exclude>**/META-INF/**</exclude>
@@ -185,11 +213,13 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-jar-plugin</artifactId>
-				<version>3.0.2</version>
 				<configuration>
 					<archive>
+						<manifestFile>META-INF/MANIFEST.MF</manifestFile>
 						<index>true</index>
 						<manifest>
+							<addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+							<addDefaultSpecificationEntries>true</addDefaultSpecificationEntries>
 							<addClasspath>true</addClasspath>
 							<classpathPrefix>${project.build.finalName}.lib/</classpathPrefix>
 							<mainClass>${mainClass}</mainClass>
@@ -206,10 +236,9 @@
 				<!-- NOTE: We don't need a groupId specification because the group is 
 					org.apache.maven.plugins ...which is assumed by default. -->
 				<artifactId>maven-assembly-plugin</artifactId>
-				<version>3.2.0</version>
 				<executions>
 					<execution>
-						<id>BatBat-Game-jar</id>
+						<id>BatBat-Game-assemble-all</id>
 						<phase>package</phase>
 						<goals>
 							<goal>single</goal>
@@ -217,6 +246,7 @@
 						<configuration>
 							<archive>
 								<manifest>
+									<addClasspath>true</addClasspath>
 									<mainClass>${mainClass}</mainClass>
 								</manifest>
 							</archive>

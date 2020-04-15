@@ -1,3 +1,7 @@
+/** Copyright to N.Kolaba
+All rights reserved ©.
+**/
+
 package al.artofsoul.batbatgame.gamestate;
 
 import java.awt.Color;
@@ -83,7 +87,7 @@ public abstract class BasicState {
 			g.drawImage(head, 120, 195, null);
 		// other
 		g.setFont(font2);
-		g.drawString("2017 \u00A9 tonikolaba", 10, 232);
+		g.drawString("tonikolaba \u00A9 \u00AE", 10, 232);
 	}
 
 	protected void select() {
