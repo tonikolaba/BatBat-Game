@@ -1,4 +1,4 @@
-![Alt text](https://github.com/tonikolaba/download/blob/master/Windows/BatBat%20Game/BatBat.jpg)
+![Alt text](https://github.com/tonikolaba/download/blob/master/Windows/BatBat%20Game/BatBat.jpg)    //per ta ndryshu
 ===================
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/e9e43be11a8a4ca68a9186507060147c)](https://www.codacy.com/app/tonikolaba/BatBat-Game?utm_source=github.com&utm_medium=referral&utm_content=tonikolaba/BatBat-Game&utm_campaign=badger)
@@ -13,11 +13,11 @@
 
 ## Getting Started
 
-BatBat is a java game, he had a very simple mission: to survive and to kill the evil. BatBat is the player how is asked to kill anyone in his way, which is evil. Evil has many forms and is the mission of BatBat to find and discover at any level, for now, the game has 4 levels.
+BatBat is a java game, he had a very simple mission: to survive and to kill the evil. BatBat is the player how is asked to kill anyone in his way, which is evil. Evil has many forms and is the mission of BatBat to find and discover at any level.
 
-![Alt text](https://github.com/tonikolaba/BatBat-Game/blob/master/about/bg.gif)
+![Alt text](https://github.com/tonikolaba/BatBat-Game/blob/master/about/bg-update.gif)
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+See deployment for notes on how to deploy the project on a live system.
 
 ![alt text](https://github.com/tonikolaba/BatBat-Game/blob/master/about/1.gif) | ![alt text](https://github.com/tonikolaba/BatBat-Game/blob/master/about/6.gif)
 ------------ | -------------
@@ -30,7 +30,7 @@ BatBat Game can easy be [Fork](https://github.com/artofsoul/BatBat-Game#fork-des
 BatBat Game can easy be Fork on you IDE just follow the steps:
 1 - Import from Github - File/Import/Git/Projects from Git
 2 - Import from Workspace - File/Import/General/Existing projects from Workspace(try to find where GitHub have download project)
-3 - Run Game as a Java Application (JDK environment - no JRE).
+3 - Run Game as a Java/Maven/Spring Boot Application (JDK environment - no JRE).
 
 ```
 
@@ -42,25 +42,31 @@ Simply!
  
 ## Built With
 
-As Maven Project:
+As Spring Boot/Maven:
 
->  - Run bat files "install.bat"
->  - Then bat files "run.bat"
+>  - mvn clean install spring-boot:run
+>  - run as Spring Boot Apppication IDE
+
+or
+
+>  - docs/run/install.bat
+>  - docs/run/run.bat
 
 As Java Project:
 
-> - Run as Java Application
+>  - Run as Java Application
 
-* **Java**  :heavy_check_mark:
-* **Maven**  :heavy_check_mark:
-* **JLayer**  :heavy_check_mark:
-* **MP3SPI**  :heavy_check_mark:
-* **Tritonus**  :heavy_check_mark:
-
-![Alt text](https://github.com/tonikolaba/download/blob/master/info/artofsoullogoNewVOG.png)
+| Language| Version | Supported  | 
+| ------ | ------  | ------ 
+| Spring Boot | < 2.2.6 | :heavy_check_mark: 
+| Java |  > 1.8 | :heavy_check_mark: 
+| Maven | < 3.6.3 | :heavy_check_mark: 
+| :warning: ... | :question: :exclamation: | :mag: :wink: |
 
 ## Author
- 
+![Alt text](https://github.com/tonikolaba/download/blob/master/info/artofsoullogoNewVOG.png)
+
+
 *:octocat: with :heart: by* **[tonikolaba](https://github.com/tonikolaba)** *:copyright:* 
 
 

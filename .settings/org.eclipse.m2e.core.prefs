@@ -1,2 +1,5 @@
+activeProfiles=
 eclipse.preferences.version=1
 org.eclipse.jdt.core.compiler.problem.forbiddenReference=warning
+resolveWorkspaceProjects=true
+version=1
