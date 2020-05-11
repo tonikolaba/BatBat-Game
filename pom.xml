@@ -7,11 +7,7 @@
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>2.2.6.RELEASE</version>
-<<<<<<< HEAD
-		<relativePath />
-=======
 		<relativePath /> <!-- lookup parent from repository -->
->>>>>>> aae2fa52323674b457b6667781f55e1db62713db
 	</parent>
 
 	<modelVersion>4.0.0</modelVersion>
@@ -35,49 +31,27 @@
 	</developers>
 
 	<properties>
-<<<<<<< HEAD
-        <maven.compiler.target>1.8</maven.compiler.target>
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <java.version>1.8</java.version>
-		<mainClass>al.tonikolaba.main.BatBatSpring</mainClass>
-=======
-		<jdkVersion>1.8</jdkVersion>
 		<maven.compiler.target>1.8</maven.compiler.target>
 		<maven.compiler.source>1.8</maven.compiler.source>
-		<timestamp>${maven.build.timestamp}</timestamp>
-		<maven.build.timestamp.format>yyyy-MM-dd HH:mm</maven.build.timestamp.format>
-		<!-- Spring boot main class -->
-		<start-class>al.artofsoul.batbatgame.main.BatBat</start-class>
-		<mainClass>al.artofsoul.batbatgame.main.BatBatGame</mainClass>
->>>>>>> aae2fa52323674b457b6667781f55e1db62713db
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<java.version>1.8</java.version>
+		<mainClass>al.tonikolaba.main.BatBatSpring</mainClass>
 	</properties>
 
 	<dependencies>
-<<<<<<< HEAD
-=======
 		<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-loader -->
->>>>>>> aae2fa52323674b457b6667781f55e1db62713db
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter</artifactId>
 		</dependency>
-<<<<<<< HEAD
 		<!-- test -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-=======
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-tomcat</artifactId>
-			<scope>compile</scope>
-		</dependency>
 		<!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core -->
->>>>>>> aae2fa52323674b457b6667781f55e1db62713db
 		<dependency>
 			<groupId>org.apache.logging.log4j</groupId>
 			<artifactId>log4j-core</artifactId>
@@ -100,15 +74,9 @@
 	</dependencies>
 
 	<build>
-<<<<<<< HEAD
 		<finalName>BatBatGame</finalName>
 		<defaultGoal>clean install package</defaultGoal>
-		
-=======
-		<finalName>BatBat-Game</finalName>
-		<defaultGoal>clean install</defaultGoal>
-		<sourceDirectory>src</sourceDirectory>
->>>>>>> aae2fa52323674b457b6667781f55e1db62713db
+
 		<resources>
 			<resource>
 				<directory>src/main/resources</directory>
@@ -120,84 +88,9 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
-<<<<<<< HEAD
-				<!-- <version>2.2.6.RELEASE</version> -->
-=======
 				<configuration>
-					<mainClass>${start-class}</mainClass>
-					<source>${maven.compiler.source}</source>
-					<target>${maven.compiler.target}</target>
-					<encoding>UTF-8</encoding>
-					<layout>WAR</layout>
-					<executable>true</executable>
-					<addResources>true</addResources>
-				</configuration>
-				<executions>
-					<execution>
-						<goals>
-							<goal>repackage</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-resources-plugin</artifactId>
-				<configuration>
-					<encoding>UTF-8</encoding>
-				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-dependency-plugin</artifactId>
-				<executions>
-					<execution>
-						<id>copy-dependencies</id>
-						<phase>package</phase>
-						<goals>
-							<goal>copy-dependencies</goal>
-						</goals>
-						<configuration>
-							<outputDirectory>
-								${project.build.directory}/dependency-jars/
-							</outputDirectory>
-							<artifactItems>
-								<artifactItem>
-									<groupId>com.heroku</groupId>
-									<artifactId>webapp-runner</artifactId>
-									<version>9.0.30.0</version>
-									<destFileName>webapp-runner.jar</destFileName>
-								</artifactItem>
-							</artifactItems>
-							<outputDirectory>${project.build.directory}/lib</outputDirectory>
-							<overWriteReleases>false</overWriteReleases>
-							<overWriteSnapshots>false</overWriteSnapshots>
-							<overWriteIfNewer>true</overWriteIfNewer>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin>
-			<!-- Produce Javadoc JAR -->
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-javadoc-plugin</artifactId>
-				<executions>
-					<execution>
-						<id>attach-javadocs</id> <!-- The actual id should be apparent from maven output -->
-						<configuration>
-							<additionalparam>${javadoc.opts}</additionalparam>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin>
-			<!-- Produce Sources JAR -->
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-source-plugin</artifactId>
->>>>>>> aae2fa52323674b457b6667781f55e1db62713db
-				<configuration>
-					<addResources>true</addResources>
 					<mainClass>${mainClass}</mainClass>
+					<addResources>true</addResources>
 				</configuration>
 				<executions>
 					<execution>
@@ -209,145 +102,20 @@
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
-<<<<<<< HEAD
 				<artifactId>maven-install-plugin</artifactId>
 				<executions>
 					<execution>
 						<id>default-install</id>
 						<phase>none</phase>
-=======
-				<artifactId>maven-jar-plugin</artifactId>
-				<configuration>
-					<archive>
-						<manifestFile>META-INF/MANIFEST.MF</manifestFile>
-						<index>true</index>
-						<manifest>
-							<addDefaultImplementationEntries>true</addDefaultImplementationEntries>
-							<addDefaultSpecificationEntries>true</addDefaultSpecificationEntries>
-							<addClasspath>true</addClasspath>
-							<classpathPrefix>${project.build.finalName}.lib/</classpathPrefix>
-							<mainClass>${mainClass}</mainClass>
-						</manifest>
-						<manifestEntries>
-							<mode>development</mode>
-							<url>${project.url}</url>
-							<key>value</key>
-						</manifestEntries>
-					</archive>
-				</configuration>
-			</plugin>
-			<plugin>
-				<!-- NOTE: We don't need a groupId specification because the group is 
-					org.apache.maven.plugins ...which is assumed by default. -->
-				<artifactId>maven-assembly-plugin</artifactId>
-				<executions>
-					<execution>
-						<id>BatBat-Game-assemble-all</id>
-						<phase>package</phase>
-						<goals>
-							<goal>single</goal>
-						</goals>
-						<configuration>
-							<archive>
-								<manifest>
-									<addClasspath>true</addClasspath>
-									<mainClass>${mainClass}</mainClass>
-								</manifest>
-							</archive>
-							<descriptorRefs>
-								<descriptorRef>jar-with-dependencies</descriptorRef>
-							</descriptorRefs>
-							<finalName>BatBat-Game</finalName>
-							<appendAssemblyId>false</appendAssemblyId>
-						</configuration>
->>>>>>> aae2fa52323674b457b6667781f55e1db62713db
 					</execution>
 				</executions>
 			</plugin>
 		</plugins>
 	</build>
-
+	
 	<ciManagement>
 		<system>travis-ci</system>
 		<url>https://travis-ci.org/tonikolaba/BatBat-Game</url>
 	</ciManagement>
-<<<<<<< HEAD
 
 </project>
-<!-- <project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0" 
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"> 
-	<modelVersion>4.0.0</modelVersion> <groupId>al.artofsoul.batbatgame</groupId> 
-	<artifactId>BatBat-Game</artifactId> <version>1.0</version> <name>BatBat-Game</name> 
-	<packaging>jar</packaging> <url>http://www.github.com/tonikolaba/BatBat-Game</url> 
-	<description>A small platform game tutorial top build a basic Framework over 
-	the sample game, and extract useful mechanism. </description> <inceptionYear>2017</inceptionYear> 
-	<organization> <name>tonikolaba</name> </organization> <developers> <developer> 
-	<name>tonikolaba</name> <email>ask_for_it</email> <roles> <role>Project leader/manager</role> 
-	</roles> </developer> </developers> <contributors> <contributor> <name>tonikolaba</name> 
-	<organization>artofsoul</organization> <roles> <role>Author, Software Designer</role> 
-	</roles> </contributor> </contributors> <properties> <jdkVersion>1.8</jdkVersion> 
-	<maven.compiler.target>1.8</maven.compiler.target> <maven.compiler.source>1.8</maven.compiler.source> 
-	<timestamp>${maven.build.timestamp}</timestamp> <maven.build.timestamp.format>yyyy-MM-dd 
-	HH:mm</maven.build.timestamp.format> <mainClass>al.tonikolaba.batbatgame.main.BatBatGame</mainClass> 
-	</properties> <dependencies> https://mvnrepository.com/artifact/junit/junit 
-	<dependency> <groupId>junit</groupId> <artifactId>junit</artifactId> <version>4.13</version> 
-	<scope>test</scope> </dependency> <dependency> <groupId>org.apache.logging.log4j</groupId> 
-	<artifactId>log4j-core</artifactId> <version>2.12.1</version> </dependency> 
-	<dependency> <groupId>com.googlecode.soundlibs</groupId> <artifactId>jlayer</artifactId> 
-	<version>1.0.1-2</version> </dependency> <dependency> <groupId>com.googlecode.soundlibs</groupId> 
-	<artifactId>mp3spi</artifactId> <version>1.9.5-2</version> </dependency> 
-	<dependency> <groupId>com.googlecode.soundlibs</groupId> <artifactId>tritonus-share</artifactId> 
-	<version>0.3.7-3</version> </dependency> </dependencies> <profiles> <profile> 
-	<id>disable-java8-doclint</id> <activation> <jdk>[1.8,)</jdk> </activation> 
-	<properties> <additionalparam>-Xdoclint:none</additionalparam> </properties> 
-	</profile> </profiles> <build> <directory>${project.basedir}/target</directory> 
-	<outputDirectory>${project.build.directory}/classes</outputDirectory> <finalName>${project.artifactId}-${project.version}</finalName> 
-	<testOutputDirectory>${project.build.directory}/test-classes</testOutputDirectory> 
-	<sourceDirectory>src</sourceDirectory> <scriptSourceDirectory>${project.basedir}/src/main/scripts</scriptSourceDirectory> 
-	<testSourceDirectory>${project.basedir}/src/test/java</testSourceDirectory> 
-	<resources> <resource> <directory>./Resources</directory> </resource> </resources> 
-	NOTE: These plugins will be removed from future versions of the super POM 
-	They are kept for the moment as they are very unlikely to conflict with lifecycle 
-	mappings (MNG-4453) <plugins> <plugin> <groupId>org.apache.maven.plugins</groupId> 
-	<artifactId>maven-compiler-plugin</artifactId> <version>3.7.0</version> <configuration> 
-	<source>${maven.compiler.source}</source> <target>${maven.compiler.target}</target> 
-	<encoding>UTF-8</encoding> </configuration> </plugin> <plugin> <groupId>org.apache.maven.plugins</groupId> 
-	<artifactId>maven-resources-plugin</artifactId> <version>3.0.2</version> 
-	<configuration> <encoding>UTF-8</encoding> </configuration> </plugin> Build 
-	JAR with manifest <plugin> <groupId>org.apache.maven.plugins</groupId> <artifactId>maven-jar-plugin</artifactId> 
-	<version>3.0.2</version> <configuration> <archive> <index>true</index> <manifest> 
-	<addClasspath>true</addClasspath> <classpathPrefix>${project.build.finalName}.lib/</classpathPrefix> 
-	<mainClass>${mainClass}</mainClass> </manifest> <manifestEntries> <mode>development</mode> 
-	<url>${project.url}</url> <key>value</key> </manifestEntries> </archive> 
-	</configuration> </plugin> <plugin> NOTE: We don't need a groupId specification 
-	because the group is org.apache.maven.plugins ...which is assumed by default. 
-	<artifactId>maven-assembly-plugin</artifactId> <version>3.2.0</version> <executions> 
-	<execution> <id>BatBat-Game-jar</id> <phase>package</phase> <goals> <goal>single</goal> 
-	</goals> <configuration> <archive> <manifest> <mainClass>${mainClass}</mainClass> 
-	</manifest> </archive> <descriptorRefs> <descriptorRef>jar-with-dependencies</descriptorRef> 
-	</descriptorRefs> <finalName>${project.artifactId}-${project.version}</finalName> 
-	<appendAssemblyId>false</appendAssemblyId> </configuration> </execution> 
-	</executions> </plugin> <plugin> <groupId>org.apache.maven.plugins</groupId> 
-	<artifactId>maven-dependency-plugin</artifactId> <version>3.0.2</version> 
-	<executions> <execution> <id>copy-dependencies</id> <phase>prepare-package</phase> 
-	<goals> <goal>copy-dependencies</goal> </goals> <configuration> <artifactItems> 
-	<artifactItem> <groupId>com.github.jsimone</groupId> <artifactId>webapp-runner</artifactId> 
-	<version>9.0.24.1</version> <destFileName>webapp-runner.jar</destFileName> 
-	</artifactItem> </artifactItems> <outputDirectory>${project.build.directory}/lib</outputDirectory> 
-	<overWriteReleases>false</overWriteReleases> <overWriteSnapshots>false</overWriteSnapshots> 
-	<overWriteIfNewer>true</overWriteIfNewer> </configuration> </execution> </executions> 
-	</plugin> <plugin> <artifactId>maven-release-plugin</artifactId> <version>2.5.3</version> 
-	</plugin> </plugins> </build> <profiles> NOTE: The release profile will be 
-	removed from future versions of the super POM <profile> <id>BatBat-Game-release</id> 
-	<activation> <property> <name>performRelease</name> <value>true</value> </property> 
-	</activation> <build> <plugins> <plugin> <inherited>true</inherited> Produce 
-	Javadoc JAR <groupId>org.apache.maven.plugins</groupId> <artifactId>maven-javadoc-plugin</artifactId> 
-	<version>2.9</version> <executions> <execution> <id>attach-javadocs</id> 
-	The actual id should be apparent from maven output <goals> <goal>jar</goal> 
-	</goals> <configuration> <additionalparam>${javadoc.opts}</additionalparam> 
-	</configuration> </execution> </executions> </plugin> </plugins> </build> 
-	</profile> </profiles> <ciManagement> <system>travis-ci</system> <url>https://travis-ci.org/tonikolaba/BatBat-Game</url> 
-	</ciManagement> </build> -->
-=======
-</project>
->>>>>>> aae2fa52323674b457b6667781f55e1db62713db
