@@ -2,7 +2,11 @@
 All rights reserved ©.
 **/
 
+<<<<<<< HEAD:src/main/java/al/tonikolaba/gamestate/BasicState.java
 package al.tonikolaba.gamestate;
+=======
+package al.artofsoul.batbatgame.gamestate;
+>>>>>>> aae2fa52323674b457b6667781f55e1db62713db:src/main/java/al/artofsoul/batbatgame/gamestate/BasicState.java
 
 import java.awt.Color;
 import java.awt.Font;
