@@ -37,6 +37,7 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
 		<mainClass>al.tonikolaba.main.BatBatSpring</mainClass>
+		<full-artifact-name>target/BatBatGame.jar</full-artifact-name>
 	</properties>
 
 	<dependencies>
@@ -44,7 +45,17 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter</artifactId>
+			<exclusions>
+                <exclusion>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-starter-logging</artifactId>
+                </exclusion>
+            </exclusions>
 		</dependency>
+		<!--  <dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>-->
 		<!-- test -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -95,12 +106,13 @@
 				<executions>
 					<execution>
 						<goals>
+						    <goal>build-info</goal>
 							<goal>repackage</goal>
 						</goals>
 					</execution>
 				</executions>
 			</plugin>
-			<plugin>
+		    <plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-install-plugin</artifactId>
 				<executions>
@@ -110,9 +122,38 @@
 					</execution>
 				</executions>
 			</plugin>
+			<plugin>
+				<groupId>com.heroku.sdk</groupId>
+				<artifactId>heroku-maven-plugin</artifactId>
+        		<!--  <version>3.0.2</version>-->
+        		<version>{version}</version>
+				<configuration>
+					<appName>batbatgametest</appName>
+					<includeTarget>false</includeTarget>
+					<includes>
+						<include>target/BatBatGame.jar</include>
+					</includes>
+					<jdkVersion>${java.version}</jdkVersion>
+					<processTypes>
+						<web>java $JAVA_OPTS -jar target/BatBatGame.jar</web>
+					</processTypes>
+				</configuration>
+			</plugin>
+			<plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>cobertura-maven-plugin</artifactId>
+                <version>2.7</version>
+                <configuration>
+                    <formats>
+                        <format>html</format>
+                        <format>xml</format>
+                    </formats>
+                    <check/>
+                </configuration>
+            </plugin>
 		</plugins>
 	</build>
-	
+
 	<ciManagement>
 		<system>travis-ci</system>
 		<url>https://travis-ci.org/tonikolaba/BatBat-Game</url>
