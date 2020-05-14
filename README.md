@@ -1,4 +1,4 @@
-![Alt text](https://github.com/tonikolaba/download/blob/master/Windows/BatBat%20Game/BatBat.jpg)    //per ta ndryshu
+![Alt text](https://github.com/tonikolaba/download/blob/master/Windows/BatBat%20Game/BatBat.jpg)
 ===================
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/e9e43be11a8a4ca68a9186507060147c)](https://www.codacy.com/app/tonikolaba/BatBat-Game?utm_source=github.com&utm_medium=referral&utm_content=tonikolaba/BatBat-Game&utm_campaign=badger)
@@ -11,7 +11,7 @@
 ----------
 
 
-## Getting Started
+## BatBat Game
 
 BatBat is a java game, he had a very simple mission: to survive and to kill the evil. BatBat is the player how is asked to kill anyone in his way, which is evil. Evil has many forms and is the mission of BatBat to find and discover at any level.
 
@@ -46,9 +46,6 @@ As Spring Boot/Maven:
 
 >  - mvn clean install spring-boot:run
 >  - run as Spring Boot Apppication IDE
-
-or
-
 >  - docs/run/install.bat
 >  - docs/run/run.bat
 
@@ -63,11 +60,9 @@ As Java Project:
 | Maven | < 3.6.3 | :heavy_check_mark: 
 | :warning: ... | :question: :exclamation: | :mag: :wink: |
 
-## Author
+
+
+### Author  
 ![Alt text](https://github.com/tonikolaba/download/blob/master/info/artofsoullogoNewVOG.png)
 
-
-*:octocat: with :heart: by* **[tonikolaba](https://github.com/tonikolaba)** *:copyright:* 
-
-
-
+*:octocat: with :heart: by* **[tonikolaba](https://github.com/tonikolaba)** *:copyright:*
