@@ -57,3 +57,35 @@ jobs:
         env:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
         shell: bash
+  
+  deploy:
+    runs-on: ubuntu-lastest
+    name: Deploy the JAR file to the remote server
+    needs: build
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up JDK 1.8
+        uses: actions/setup-java@v1
+        with:
+         java-version: 1.8
+      - name: Generate the package
+        run: mvn -B package --file pom.xml -Dmaven.test.skip=true
+      - name: Deploy the package to the remote server
+        uses: garygrossgarten/github-action-scp@release
+        with:
+          local: target/BatBatGame.jar
+          remote: tonikolaba/batbatgame/actions/BatBatGame.jar # My remote directory
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.SSH_USER }}
+          password: ${{ secrets.SSH_PASS }}
+      - name: Run a script on remote server (start the application)
+        if: always()
+        uses: fifsky/ssh-action@master
+        with:
+           command: |
+            cd tonikolaba/batbatgame/actions/ && java -jar BatBatGame.jar &
+           host: ${{ secrets.HOST }}
+           user: ${{ secrets.SSH_USER }}
+           pass: ${{ secrets.SSH_PASS }}
+           args: "-tt"
+          # The & in the command runs the process on background
