@@ -74,7 +74,7 @@ jobs:
         uses: garygrossgarten/github-action-scp@release
         with:
           local: target/BatBatGame.jar
-          remote: tonikolaba/batbatgame/target/BatBatGame.jar # My remote directory
+          remote: tonikolaba/batbatgame/actions/BatBatGame.jar # My remote directory
           host: ${{ secrets.HOST }}
           username: ${{ secrets.SSH_USER }}
           password: ${{ secrets.SSH_PASS }}
@@ -83,7 +83,7 @@ jobs:
         uses: fifsky/ssh-action@master
         with:
            command: |
-            cd tonikolaba/batbatgame/target/ && java -jar BatBatGame.jar &
+            cd tonikolaba/batbatgame/actions/ && java -jar BatBatGame.jar &
            host: ${{ secrets.HOST }}
            user: ${{ secrets.SSH_USER }}
            pass: ${{ secrets.SSH_PASS }}
