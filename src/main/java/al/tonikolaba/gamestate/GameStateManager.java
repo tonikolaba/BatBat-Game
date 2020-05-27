@@ -19,7 +19,7 @@ public class GameStateManager {
 	// public static final int LEVELTEST = 6;
 	public static final int HOWTOPLAY = 7;
 	public static final int ACIDSTATE = 15;
-	private BasicState[] gameStates;
+	public BasicState[] gameStates;
 	private int currentState;
 	private PauseState pauseState;
 	private boolean paused;
@@ -38,7 +38,7 @@ public class GameStateManager {
 
 	}
 
-	private void loadState(int state) {
+	public void loadState(int state) {
 		if (state == MENUSTATE)
 			gameStates[state] = new MenuState(this);
 		else if (state == OPTIONSSTATE)

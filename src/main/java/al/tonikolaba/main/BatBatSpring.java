@@ -10,12 +10,8 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 @ComponentScan(basePackages = "al.tonikolaba.main")
-//@Controller
 @EnableAutoConfiguration
 public class BatBatSpring {
-	/**
-	 * 
-	 */
 
 	public static void main(String[] args) {
 
@@ -28,8 +24,5 @@ public class BatBatSpring {
 			// window.setVisible(true);
 		});
 	}
-	/*
-	 * @GetMapping("/") public String dashboard() { return "index"; }
-	 */
 
 }
