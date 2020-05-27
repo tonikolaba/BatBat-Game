@@ -22,13 +22,15 @@ public class MenuState extends BasicState {
 	}
 
 	@Override
-	public void draw(Graphics2D g) {
+	public void draw(Graphics2D i) {
 
-		super.draw(g);
-		g.drawRect(75, 90, 155, 100); // Fills a square
-		g.drawString("Play", 140, 133);
-		g.drawString("Options", 140, 148);
-		g.drawString("Quit", 140, 163);
+		super.draw(i);
+		// titles and fonts
+		i.setFont(fontMenu);
+		i.drawRect(230, 190, 210, 100); // Fills a square
+		i.drawString("Play", 300, 223); // 25
+		i.drawString("Options", 300, 248);
+		i.drawString("Quit", 300, 273);
 	}
 
 	@Override
@@ -61,4 +63,5 @@ public class MenuState extends BasicState {
 			currentChoice++;
 		}
 	}
+
 }

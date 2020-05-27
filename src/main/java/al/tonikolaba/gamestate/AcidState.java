@@ -28,19 +28,19 @@ public class AcidState extends BasicState {
 	@Override
 	public void draw(Graphics2D g) {
 		super.draw(g);
-		g.setFont(font);
-		g.setColor(Color.GRAY);
-		g.fillOval(85, 65, 150, 150); // draw a cycle OK
-		g.drawOval(80, 60, 160, 160); // draw a cycle
-		g.drawRect(85, 65, 150, 150); // draw a square Katerori
+		g.setFont(fontMenu);
+		g.setColor(Color.ORANGE);
+		g.fillOval(185, 165, 250, 250); // draw a cycle OK
+		g.drawOval(180, 160, 260, 260); // draw a cycle
+		g.drawRect(185, 165, 250, 250); // draw a square Katerori
 		g.setColor(Color.WHITE);
-		g.fillOval(90, 70, 140, 140); // Fills a square
-		g.setColor(Color.DARK_GRAY);
-		g.fillOval(95, 75, 130, 130);
-		g.setColor(Color.GREEN);
-		g.drawString("Congratulation!", 120, 133);
-		g.setFont(font2);
-		g.drawString("Press any key to Play Again", 100, 148);
+		g.fillOval(190, 170, 240, 240); // Fills a square
+		g.setColor(Color.YELLOW);
+		g.fillOval(195, 175, 230, 230);
+		g.setColor(Color.RED);
+		g.drawString("Congratulation!", 240, 280);
+		g.setFont(font);
+		g.drawString("Press any key to Play Again", 235, 305);
 	}
 
 	@Override

@@ -15,9 +15,12 @@ import al.tonikolaba.handlers.Keys;
 
 public class OptionsState extends BasicState {
 
+	// Font fontMenu;
+
 	public OptionsState(GameStateManager gsm) {
 		super(gsm);
 		options = new String[] { "HowTo Play", "Language", "Back" };
+		// fontMenu = new Font("Arial", Font.BOLD, 20);
 	}
 
 	@Override
@@ -27,12 +30,13 @@ public class OptionsState extends BasicState {
 	}
 
 	@Override
-	public void draw(Graphics2D g) {
-		super.draw(g);
-		g.drawRect(75, 90, 155, 100); // Fills a square
-		g.drawString("HowTo Play", 140, 133);
-		g.drawString("Language", 140, 148);
-		g.drawString("Back", 140, 163);
+	public void draw(Graphics2D i) {
+		super.draw(i);
+		i.setFont(fontMenu);
+		i.drawRect(230, 190, 210, 100); // Fills a square
+		i.drawString("HowTo Play", 300, 223);
+		i.drawString("Language", 300, 248);
+		i.drawString("Back", 300, 273);
 	}
 
 	@Override

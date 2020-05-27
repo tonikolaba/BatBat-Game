@@ -26,7 +26,7 @@ public class Level3State extends GameState {
 
 		super.init(nextLevel);
 		// backgrounds
-		temple = new Background("/Backgrounds/temple.gif", 0.5, 0);
+		temple = new Background("/Backgrounds/temple1.gif", 0.5, 0);
 
 		// tilemap
 		generateTileMap("/Maps/level3.map", 140, 0, false);

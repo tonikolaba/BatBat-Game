@@ -19,10 +19,10 @@ public class GamePanel extends JPanel implements Runnable, KeyListener {
 
 	// dimensions
 	// Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-	public static final int WIDTH = 320;
-	public static final int HEIGHT = 240;
-	public static final int SCALE = 2;
-	// public final int SCALE = (int)screenSize.getHeight()/HEIGHT;
+	public static final int WIDTH = 640;
+	public static final int HEIGHT = 480;
+	public static final int SCALE = 1;
+	// public final int SCALE = (int) screenSize.getHeight() / HEIGHT;
 	/**
 	 *
 	 */
@@ -166,4 +166,3 @@ public class GamePanel extends JPanel implements Runnable, KeyListener {
 	}
 
 }
-

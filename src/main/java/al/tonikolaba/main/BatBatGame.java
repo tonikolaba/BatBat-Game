@@ -9,9 +9,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class BatBatGame extends JFrame implements CommandLineRunner {
-	/**
-	 * 
-	 */
+
 	private static final long serialVersionUID = -437004379167511593L;
 
 	@Override
@@ -34,4 +32,5 @@ public class BatBatGame extends JFrame implements CommandLineRunner {
 			}
 		});
 	}
+
 }

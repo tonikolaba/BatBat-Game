@@ -34,19 +34,20 @@ public abstract class BasicState {
 	protected String[] options;
 	protected Font font;
 	protected Font font2;
+	protected Font fontMenu;
 
 	public BasicState(GameStateManager gsm) {
 		this.gsm = gsm;
 		try {
 
-			bg = ImageIO.read(getClass().getResourceAsStream("/Backgrounds/sfondi.gif")).getSubimage(0, 0,
+			bg = ImageIO.read(getClass().getResourceAsStream("/Backgrounds/sfondi1.gif")).getSubimage(0, 0,
 					GamePanel.WIDTH, GamePanel.HEIGHT);
 
 			// load floating head
 			head = ImageIO.read(getClass().getResourceAsStream("/HUD/Hud.gif")).getSubimage(0, 12, 12, 11);
 
 			// titles and fonts
-
+			fontMenu = new Font("Arial", Font.BOLD, 20);
 			font = new Font("Arial", Font.BOLD, 11);
 			font2 = new Font("Arial", Font.PLAIN, 9);
 
@@ -72,21 +73,22 @@ public abstract class BasicState {
 		g.setColor(Color.WHITE);
 		// draw floating head
 
+		// draw floating head
 		if (currentChoice == 0)
-			g.drawImage(head, 120, 123, null);
+			g.drawImage(head, 270, 213, null); // 25
 		else if (currentChoice == 1)
-			g.drawImage(head, 120, 138, null);
+			g.drawImage(head, 270, 238, null);
 		else if (currentChoice == 2)
-			g.drawImage(head, 120, 153, null);
+			g.drawImage(head, 270, 263, null);
 		else if (currentChoice == 3)
-			g.drawImage(head, 120, 168, null);
+			g.drawImage(head, 270, 281, null);
 		else if (currentChoice == 4)
-			g.drawImage(head, 120, 183, null);
+			g.drawImage(head, 270, 299, null);
 		else if (currentChoice == 5)
-			g.drawImage(head, 120, 195, null);
+			g.drawImage(head, 270, 317, null);
 		// other
 		g.setFont(font2);
-		g.drawString("tonikolaba \u00A9 \u00AE", 10, 232);
+		g.drawString("tonikolaba \u00A9 \u00AE", 20, 468);
 	}
 
 	protected void select() {
