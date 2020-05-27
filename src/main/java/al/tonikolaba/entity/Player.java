@@ -29,7 +29,7 @@ public class Player extends MapObject {
 	// animation actions
 	private static final int IDLE_ANIM = 0;
 	private static final int WALKING_ANIM = 1;
-	private static final int ATTACKING_ANIM = 2;
+	public static final int ATTACKING_ANIM = 2;
 	private static final int JUMPING_ANIM = 3;
 	private static final int FALLING_ANIM = 4;
 	private static final int UPATTACKING_ANIM = 5;
@@ -38,8 +38,8 @@ public class Player extends MapObject {
 	private static final int KNOCKBACK_ANIM = 8;
 	private static final int DEAD_ANIM = 9;
 	private static final int TELEPORTING_ANIM = 10;
-	private static final String PLAYERJUMP_MUSIC_NAME = "playerjump";
-	private static final String PLAYERATTACK_MUSIC_NAME = "playerattack";
+	public final String PLAYERJUMP_MUSIC_NAME = "playerjump";
+	public final String PLAYERATTACK_MUSIC_NAME = "playerattack";
 	// references
 	private ArrayList<Enemy> enemies;
 	// player stuff
@@ -138,7 +138,6 @@ public class Player extends MapObject {
 
 		setAnimation(IDLE_ANIM);
 
-		JukeBox.load("/SFX/playerjump.mp3", PLAYERJUMP_MUSIC_NAME);
 		JukeBox.load("/SFX/playerlands.mp3", "playerlands");
 		JukeBox.load("/SFX/playerattack.mp3", PLAYERATTACK_MUSIC_NAME);
 		JukeBox.load("/SFX/playerhit.mp3", "playerhit");
@@ -260,7 +259,9 @@ public class Player extends MapObject {
 	public void hit(int damage) {
 		if (flinching)
 			return;
-		JukeBox.play("playerhit");
+		// JukeBox.load("/SFX/playerhit.mp3", "playerhit");
+		// Clip c = clips.get(s);
+		// JukeBox.play("playerhit", 2);
 		stop();
 		health -= damage;
 		if (health < 0)
@@ -576,5 +577,4 @@ public class Player extends MapObject {
 		super.draw(g);
 
 	}
-
 }

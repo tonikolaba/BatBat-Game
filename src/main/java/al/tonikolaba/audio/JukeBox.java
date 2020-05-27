@@ -16,11 +16,11 @@ import al.tonikolaba.handlers.LoggingHelper;
 
 public class JukeBox {
 
-	private static HashMap<String, Clip> clips;
+	public static HashMap<String, Clip> clips;
 	private static int gap;
 	private static boolean mute = false;
 
-	private JukeBox() {
+	public JukeBox() {
 		throw new IllegalStateException("Utility Class");
 	}
 
@@ -30,8 +30,8 @@ public class JukeBox {
 	}
 
 	public static void load(String s, String n) {
-		if (clips.get(n) != null)
-			return;
+		// if (clips.get(s) != null)
+		// return;
 		Clip clip;
 		try {
 			AudioInputStream ais = AudioSystem.getAudioInputStream(JukeBox.class.getResourceAsStream(s));
