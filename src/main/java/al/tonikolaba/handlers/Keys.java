@@ -2,7 +2,6 @@ package al.tonikolaba.handlers;
 
 import java.awt.event.KeyEvent;
 
-
 // this class contains a boolean array of current and previous key states
 // for the 10 keys that are used for this game.
 // a key k is down when keyState[k] is true.
@@ -21,10 +20,10 @@ public class Keys {
 	public static final int ENTER = 8;
 	public static final int ESCAPE = 9;
 	private static final boolean[] KEY_STATE = new boolean[NUM_KEYS];
-	private static boolean[] prevKeyState = new boolean[NUM_KEYS];
+	public static boolean[] prevKeyState = new boolean[NUM_KEYS];
 
-	private Keys() {
-		throw new IllegalStateException("Utility Class");
+	public Keys() {
+		// throw new IllegalStateException("Utility Class");
 	}
 
 	public static void keySet(int i, boolean b) {

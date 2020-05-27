@@ -7,11 +7,16 @@ import org.junit.runner.RunWith;
 
 import al.tonikolaba.tilemap.TileMap;
 
+/**
+ * @author N.Kolaba
+ *
+ */
+
 @RunWith(JUnitPlatform.class)
+@DisplayName("Map Object")
 public class MapObjectTest {
 
 	@Test
-	@DisplayName("MapObject")
 	public void checkTileMapCollision() {
 		// setup
 		TileMap tm = new TileMap(200);
