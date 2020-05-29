@@ -17,23 +17,25 @@ public class HowtoPlay extends BasicState {
 
 	public HowtoPlay(GameStateManager gsm) {
 		super(gsm);
-		// fontMenu = new Font("Arial", Font.BOLD, 20);
 	}
 
 	@Override
 	public void draw(Graphics2D h) {
 		super.draw(h);
-		h.setFont(fontMenu);
+		h.setFont(font);
 		h.setColor(Color.YELLOW);
 		h.fillRect(200, 160, 280, 200); // Fills a square
+		h.setColor(Color.WHITE);
+		h.drawRoundRect(190, 150, 300, 220, 50, 50);
 		h.setColor(Color.RED);
-		h.drawString("< > - MOVE LEFT-RIGHT", 233, 200);
-		h.drawString(" W+R  -  JUMP & HIT ", 235, 225);
-		h.drawString(" R  -   SINGLE SHOOT ", 235, 250);
-		h.drawString(" F -  BIG SHOOT ", 235, 275);
-		h.drawString(" W -  JUMP UP ", 235, 300);
+		h.drawString("< >      -   MOVE LEFT OR RIGHT", 230, 200);
+		h.drawString("W+R   -   JUMP AND HIT ", 230, 220);
+		h.drawString("R         -   SINGLE HIT ", 230, 240);
+		h.drawString("F         -   BIG HIT ", 230, 260);
+		h.drawString("W        -   JUMP UP ", 230, 280);
+		h.drawString("ESC   -   PAUSE ", 230, 300);
 		h.setFont(font);
-		h.drawString(" * Press any key to go Back ", 260, 335);
+		h.drawString(" * Press any key to go Back ", 240, 330);
 	}
 
 	@Override

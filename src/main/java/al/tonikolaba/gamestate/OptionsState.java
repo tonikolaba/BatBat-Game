@@ -4,6 +4,7 @@ All rights reserved ©.
 
 package al.tonikolaba.gamestate;
 
+import java.awt.Color;
 import java.awt.Graphics2D;
 
 import al.tonikolaba.audio.JukeBox;
@@ -33,7 +34,9 @@ public class OptionsState extends BasicState {
 	public void draw(Graphics2D i) {
 		super.draw(i);
 		i.setFont(fontMenu);
-		i.drawRect(230, 190, 210, 100); // Fills a square
+		// i.drawRoundRect(210, 160, 265, 160, 50, 50);
+		// i.drawRect(220, 170, 245, 140);// Fills a square
+		i.setColor(Color.RED);
 		i.drawString("HowTo Play", 300, 223);
 		i.drawString("Language", 300, 248);
 		i.drawString("Back", 300, 273);

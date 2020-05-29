@@ -47,8 +47,8 @@ public abstract class BasicState {
 			head = ImageIO.read(getClass().getResourceAsStream("/HUD/Hud.gif")).getSubimage(0, 12, 12, 11);
 
 			// titles and fonts
-			fontMenu = new Font("Arial", Font.BOLD, 20);
-			font = new Font("Arial", Font.BOLD, 11);
+			fontMenu = new Font("Arial", Font.BOLD, 18);
+			font = new Font("Arial", Font.BOLD, 15);
 			font2 = new Font("Arial", Font.PLAIN, 9);
 
 			// load sound sfx
@@ -70,9 +70,10 @@ public abstract class BasicState {
 		g.drawImage(bg, 0, 0, null);
 		// draw menu options
 		g.setFont(font);
+		g.setColor(Color.YELLOW);
+		g.drawRoundRect(220, 170, 245, 140, 50, 50);
+		g.fillRect(230, 180, 225, 120); // Fills a square
 		g.setColor(Color.WHITE);
-		// draw floating head
-
 		// draw floating head
 		if (currentChoice == 0)
 			g.drawImage(head, 270, 213, null); // 25
