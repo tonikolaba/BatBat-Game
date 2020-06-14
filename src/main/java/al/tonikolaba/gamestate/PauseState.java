@@ -31,9 +31,9 @@ public class PauseState extends GameState {
 		g.fillRect(190, 140, 280, 200); // Fills a square
 		g.setColor(Color.RED);
 		g.setFont(fontMenu);
-		g.drawString("Game Paused", 265, 230);
+		g.drawString("Game Paused", 280, 230);
 		g.setFont(font);
-		g.drawString("* Press ESC to Continue", 265, 250);
+		g.drawString("* press ESC to continue", 250, 255);
 	}
 
 	@Override

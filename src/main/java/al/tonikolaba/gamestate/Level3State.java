@@ -18,7 +18,7 @@ public class Level3State extends GameState {
 
 	public Level3State(GameStateManager gsm) {
 		super(gsm);
-		init(GameStateManager.ACIDSTATE);
+		init(GameStateManager.LEVEL4STATE);
 	}
 
 	@Override

@@ -9,6 +9,7 @@ import java.awt.Graphics2D;
 
 import al.tonikolaba.audio.JukeBox;
 import al.tonikolaba.handlers.Keys;
+import al.tonikolaba.main.GamePanel;
 
 /**
  * @author N.Kolaba
@@ -28,10 +29,14 @@ public class AcidState extends BasicState {
 	@Override
 	public void draw(Graphics2D g) {
 		super.draw(g);
+		g.setColor(Color.YELLOW);
+		g.fillRect(0, 0, GamePanel.WIDTH, GamePanel.HEIGHT);
 		g.setFont(fontMenu);
-		g.setColor(Color.ORANGE);
+		g.setColor(Color.WHITE);
 		g.fillOval(185, 165, 250, 250); // draw a cycle OK
-		g.drawOval(180, 160, 260, 260); // draw a cycle
+		g.setColor(Color.ORANGE);
+		g.fillOval(180, 160, 260, 260); // draw a cycle
+		// g.setColor(Color.ORANGE);
 		g.drawRect(185, 165, 250, 250); // draw a square Katerori
 		g.setColor(Color.WHITE);
 		g.fillOval(190, 170, 240, 240); // Fills a square
@@ -40,7 +45,7 @@ public class AcidState extends BasicState {
 		g.setColor(Color.RED);
 		g.drawString("Congratulation!", 240, 280);
 		g.setFont(font);
-		g.drawString("Press any key to Play Again", 235, 305);
+		g.drawString("Press any key to Play Again", 215, 305);
 	}
 
 	@Override

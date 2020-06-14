@@ -25,7 +25,6 @@ public class HowtoPlay extends BasicState {
 		h.setFont(font);
 		h.setColor(Color.YELLOW);
 		h.fillRect(200, 160, 280, 200); // Fills a square
-		h.setColor(Color.WHITE);
 		h.drawRoundRect(190, 150, 300, 220, 50, 50);
 		h.setColor(Color.RED);
 		h.drawString("< >      -   MOVE LEFT OR RIGHT", 230, 200);

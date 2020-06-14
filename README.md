@@ -1,13 +1,12 @@
-![Alt text](https://github.com/tonikolaba/download/blob/master/Windows/BatBat%20Game/BatBat.jpg)
+[![Bat Bat Game](https://github.com/tonikolaba/download/blob/master/info/headerOK.png)](https://github.com/tonikolaba/download/blob/master/info/headerOK.png)
 ===================
 
+![Java CI with Maven](https://github.com/tonikolaba/BatBat-Game/workflows/Java%20CI%20with%20Maven/badge.svg?branch=master)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/e9e43be11a8a4ca68a9186507060147c)](https://www.codacy.com/app/tonikolaba/BatBat-Game?utm_source=github.com&utm_medium=referral&utm_content=tonikolaba/BatBat-Game&utm_campaign=badger)
 [![AppVeyor Build status](https://ci.appveyor.com/api/projects/status/bj4gqn3gp3gu45sa?svg=true)](https://ci.appveyor.com/project/tonikolaba/batbat-game/ "AppVeyor Build status")
 [![Build Status](https://travis-ci.org/tonikolaba/BatBat-Game.svg?branch=master)](https://travis-ci.org/tonikolaba/BatBat-Game)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=al.artofsoul.batbatgame%3ABatBat-Game&metric=alert_status)](https://sonarcloud.io/dashboard?id=al.artofsoul.batbatgame%3ABatBat-Game)
 [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=RHVZBCA4W9XD6&source=url)
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/tonikolaba/BatBat-Game/master/License.md)
-[![Twitter](https://img.shields.io/twitter/url/https/github.com/tonikolaba/BatBat-Game/.svg?style=social)](https://twitter.com/intent/tweet?text%23BatBat%20%23Game%20??%20??%20is%20a%20free%20and%20fun%20java%20game%2E%20Developer%20%40tonikolaba)
 ----------
 
 
@@ -33,6 +32,13 @@ BatBat Game can easy be Fork on you IDE just follow the steps:
 3 - Run Game as a Java/Maven/Spring Boot Application (JDK environment - no JRE).
 
 ```
+Select Spring Boot or Maven or Java Application:
+
+> 1. mvn clean install spring-boot:run
+> 2. run as Spring Boot or Java Application from IDE
+> 3. docs/run/install.bat
+> 4. docs/run/run.bat
+> 5. double click target/batbatgame.jar
 
 #### :bookmark_tabs: **If you want to play the game on Windows, Linux, Mac OS the setup file can be found on [GameJolt](http://gamejolt.com/games/BatBat-Game/264212) and any other information for any error or problem.** 
 
@@ -40,27 +46,27 @@ BatBat Game can easy be Fork on you IDE just follow the steps:
 
 Simply!
  
-## Built With
-
-As Spring Boot/Maven:
-
->  - mvn clean install spring-boot:run
->  - run as Spring Boot Apppication IDE
->  - docs/run/install.bat
->  - docs/run/run.bat
-
-As Java Project:
-
->  - Run as Java Application
+## Built:
 
 | Language| Version | Supported  | 
 | ------ | ------  | ------ 
 | Spring Boot | < 2.2.6 | :heavy_check_mark: 
 | Java |  > 1.8 | :heavy_check_mark: 
 | Maven | < 3.6.3 | :heavy_check_mark: 
+| JUnit 5 |  5.5.2 | :heavy_check_mark: 
 | :warning: ... | :question: :exclamation: | :mag: :wink: |
 
 
+Become :battery: :clap:
+----------------------
+[![Goriar](https://github.com/tonikolaba/download/blob/master/info/BeBatBat.png)](https://github.com/Goriar)
+[![Fahaba](https://github.com/tonikolaba/download/blob/master/info/BeBatBat.png)](https://github.com/Fahaba)
+[![Hedgedoge21490](https://github.com/tonikolaba/download/blob/master/info/BeBatBat.png)](https://github.com/Hedgedoge21490)
+[![OSUCS362](https://github.com/tonikolaba/download/blob/master/info/BeBatBat.png)](https://github.com/OSUCS362)
+[![Han Jiang](https://github.com/tonikolaba/download/blob/master/info/BeBatBat.png)](https://github.com/HanJiang915/)
+[![vellanka](https://github.com/tonikolaba/download/blob/master/info/BeBatBat.png)](https://github.com/vellanka)
+[![baixi-cs](https://github.com/tonikolaba/download/blob/master/info/BeBatBat.png)](https://github.com/baixi-cs)
+[![Joelle Perez](https://github.com/tonikolaba/download/blob/master/info/BeBatBat.png)](https://github.com/JLionPerez)
 
 ### Author  
 ![Alt text](https://github.com/tonikolaba/download/blob/master/info/artofsoullogoNewVOG.png)

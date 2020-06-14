@@ -90,7 +90,7 @@ public class GameStateManager {
 		if (gameStates[currentState] != null)
 			gameStates[currentState].draw(g);
 		else {
-			g.setColor(java.awt.Color.BLACK);
+			g.setColor(java.awt.Color.YELLOW);
 			g.fillRect(0, 0, GamePanel.WIDTH, GamePanel.HEIGHT);
 		}
 	}
