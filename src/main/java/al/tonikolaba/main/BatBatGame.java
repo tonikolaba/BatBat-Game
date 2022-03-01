@@ -1,9 +1,11 @@
 package al.tonikolaba.main;
 
 import java.awt.EventQueue;
+import java.util.logging.Level;
 
 import javax.swing.JFrame;
 
+import al.tonikolaba.handlers.LoggingHelper;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
@@ -27,7 +29,7 @@ public class BatBatGame extends JFrame implements CommandLineRunner {
 					window.setLocationRelativeTo(null);
 					window.setVisible(true);
 				} catch (Exception e) {
-					e.printStackTrace();
+					LoggingHelper.LOGGER.log(Level.SEVERE, e.getMessage());
 				}
 			}
 		});
