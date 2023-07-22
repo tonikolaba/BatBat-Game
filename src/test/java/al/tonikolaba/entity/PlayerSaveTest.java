@@ -44,8 +44,8 @@ public class PlayerSaveTest {
 		int expectLives = PlayerSave.getLives();
 		assertEquals(expectLives, 3);
 
-		PlayerSave.setHealth(5);
-		int expectHealth = PlayerSave.getHealth();
+		PlayerSave.setHeath(5);
+		int expectHealth = PlayerSave.getHeath();
 		assertEquals(expectHealth, 5);
 
 		PlayerSave.setTime(0);
@@ -82,25 +82,25 @@ public class PlayerSaveTest {
 		PlayerSave ps = new PlayerSave();
 		assertNotNull(ps);
 
-		PlayerSave.setHealth(5);
+		PlayerSave.setHeath(5);
 		int expectHealth;
-		expectHealth = PlayerSave.getHealth();
+		expectHealth = PlayerSave.getHeath();
 		assertEquals(expectHealth, 5);
 
-		PlayerSave.setHealth(10);
-		int expectHealth2 = PlayerSave.getHealth();
+		PlayerSave.setHeath(10);
+		int expectHealth2 = PlayerSave.getHeath();
 		assertEquals(expectHealth2, 10);
 
-		PlayerSave.setHealth(15);
-		int expectHealth3 = PlayerSave.getHealth();
+		PlayerSave.setHeath(15);
+		int expectHealth3 = PlayerSave.getHeath();
 		assertEquals(expectHealth3, 15);
 
-		PlayerSave.setHealth(0);
-		int expectHealth4 = PlayerSave.getHealth();
+		PlayerSave.setHeath(0);
+		int expectHealth4 = PlayerSave.getHeath();
 		assertEquals(expectHealth4, 0);
 
-		PlayerSave.setHealth(3);
-		int expectHealth5 = PlayerSave.getHealth();
+		PlayerSave.setHeath(3);
+		int expectHealth5 = PlayerSave.getHeath();
 		assertEquals(expectHealth5, 3);
 
 	}

@@ -6,6 +6,7 @@ import al.tonikolaba.main.GamePanel;
 import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferedImage;
+import java.util.Objects;
 import java.util.logging.Level;
 
 /**
@@ -38,7 +39,7 @@ public class Background {
     public Background(String s, double d1, double d2) {
         try {
             image = ImageIO.read(
-                    getClass().getResourceAsStream(s)
+                    Objects.requireNonNull(getClass().getResourceAsStream(s))
             );
             width = image.getWidth();
             height = image.getHeight();
@@ -52,7 +53,7 @@ public class Background {
     public Background(String s, double ms, int x, int y, int w, int h) {
         try {
             image = ImageIO.read(
-                    getClass().getResourceAsStream(s)
+                    Objects.requireNonNull(getClass().getResourceAsStream(s))
             );
             image = image.getSubimage(x, y, w, h);
             width = image.getWidth();

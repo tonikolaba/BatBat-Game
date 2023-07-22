@@ -156,7 +156,7 @@ public abstract class GameState extends BasicState {
 		playerYStart = playerY;
 		player = new Player(tileMap);
 		player.setPosition(playerX, playerY);
-		player.setHealth(PlayerSave.getHealth());
+		player.setHealth(PlayerSave.getHeath());
 		player.setLives(PlayerSave.getLives());
 		player.setTime(PlayerSave.getTime());
 
@@ -453,7 +453,7 @@ public abstract class GameState extends BasicState {
 			JukeBox.stop(TELEPORT_MUSIC_NAME);
 		}
 		if (eventCount == 180) {
-			PlayerSave.setHealth(player.getHealth());
+			PlayerSave.setHeath(player.getHealth());
 			PlayerSave.setLives(player.getLives());
 			PlayerSave.setTime(player.getTime());
 			gsm.setState(nextLevelState);
