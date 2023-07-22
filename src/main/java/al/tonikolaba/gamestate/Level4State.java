@@ -68,16 +68,16 @@ public class Level4State extends GameState {
 		// player
 		player = new Player(tileMap);
 		player.setPosition(50, 190);
-		player.setHealth(PlayerSave.getHealth());
+		player.setHealth(PlayerSave.getHeath());
 		player.setLives(PlayerSave.getLives());
 		player.setTime(PlayerSave.getTime());
 
 		// player
-		player = new Player(tileMap);
-		player.setPosition(50, 190);
-		player.setHealth(PlayerSave.getHealth());
-		player.setLives(PlayerSave.getLives());
-		player.setTime(PlayerSave.getTime());
+//		player = new Player(tileMap);
+//		player.setPosition(50, 190);
+//		player.setHealth(PlayerSave.getHealth());
+//		player.setLives(PlayerSave.getLives());
+//		player.setTime(PlayerSave.getTime());
 
 		// explosions
 		explosions = new ArrayList<Explosion>();
@@ -341,7 +341,7 @@ public class Level4State extends GameState {
 			tb.get(0).height += 8;
 		}
 		if (eventCount == 60) {
-			PlayerSave.setHealth(player.getHealth());
+			PlayerSave.setHeath(player.getHealth());
 			PlayerSave.setLives(player.getLives());
 			PlayerSave.setTime(player.getTime());
 			gsm.setState(GameStateManager.ACIDSTATE);

@@ -16,7 +16,7 @@ public class GameStateManager {
 	public static final int LEVEL2STATE = 3;
 	public static final int LEVEL3STATE = 4;
 	public static final int LEVEL4STATE = 5;
-	// public static final int LEVELTEST = 6;
+//	 public static final int LEVELTEST = 6;
 	public static final int HOWTOPLAY = 7;
 	public static final int ACIDSTATE = 15;
 	public BasicState[] gameStates;
@@ -39,24 +39,35 @@ public class GameStateManager {
 	}
 
 	public void loadState(int state) {
-		if (state == MENUSTATE)
-			gameStates[state] = new MenuState(this);
-		else if (state == OPTIONSSTATE)
-			gameStates[state] = new OptionsState(this);
-		else if (state == HOWTOPLAY)
-			gameStates[state] = new HowtoPlay(this);
-		else if (state == LEVEL1STATE)
-			gameStates[state] = new Level1State(this);
-		else if (state == LEVEL2STATE)
-			gameStates[state] = new Level2State(this);
-		else if (state == LEVEL3STATE)
-			gameStates[state] = new Level3State(this);
-		else if (state == LEVEL4STATE)
-			gameStates[state] = new Level4State(this);
-		// else if (state == LEVELTEST)
-		// gameStates[state] = new LevelTest(this);
-		else if (state == ACIDSTATE)
-			gameStates[state] = new AcidState(this);
+		switch (state) {
+			case (MENUSTATE):
+				gameStates[state] = new MenuState(this);
+				break;
+			case (OPTIONSSTATE):
+				gameStates[state] = new OptionsState(this);
+				break;
+			case(HOWTOPLAY):
+				gameStates[state] = new HowtoPlay(this);
+				break;
+			case (LEVEL1STATE):
+				gameStates[state] = new Level1State(this);
+				break;
+			case (LEVEL2STATE):
+				gameStates[state] = new Level2State(this);
+				break;
+			case (LEVEL3STATE):
+				gameStates[state] = new Level3State(this);
+				break;
+			case(LEVEL4STATE):
+				gameStates[state] = new Level4State(this);
+				break;
+//			case(LEVELTEST):
+//			gameStates[state] = new LevelTest(this);
+//			break;
+			case(ACIDSTATE):
+				gameStates[state] = new AcidState(this);
+				break;
+		}
 	}
 
 	private void unloadState(int state) {

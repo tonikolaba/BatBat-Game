@@ -26,27 +26,39 @@ public class Keys {
 		// throw new IllegalStateException("Utility Class");
 	}
 
-	public static void keySet(int i, boolean b) {
-		if (i == KeyEvent.VK_UP)
-			getKeyState()[UP] = b;
-		else if (i == KeyEvent.VK_LEFT)
-			getKeyState()[LEFT] = b;
-		else if (i == KeyEvent.VK_DOWN)
-			getKeyState()[DOWN] = b;
-		else if (i == KeyEvent.VK_RIGHT)
-			getKeyState()[RIGHT] = b;
-		else if (i == KeyEvent.VK_W)
-			getKeyState()[BUTTON1] = b;
-		else if (i == KeyEvent.VK_E)
-			getKeyState()[BUTTON2] = b;
-		else if (i == KeyEvent.VK_R)
-			getKeyState()[BUTTON3] = b;
-		else if (i == KeyEvent.VK_F)
-			getKeyState()[BUTTON4] = b;
-		else if (i == KeyEvent.VK_ENTER)
-			getKeyState()[ENTER] = b;
-		else if (i == KeyEvent.VK_ESCAPE)
-			getKeyState()[ESCAPE] = b;
+	public static void keySet(int key, boolean b) {
+		switch (key) {
+			case (KeyEvent.VK_UP):
+				getKeyState()[UP] = b;
+				break;
+			case (KeyEvent.VK_LEFT):
+				getKeyState()[LEFT] = b;
+				break;
+			case (KeyEvent.VK_DOWN):
+				getKeyState()[DOWN] = b;
+				break;
+			case (KeyEvent.VK_RIGHT):
+				getKeyState()[RIGHT] = b;
+				break;
+			case (KeyEvent.VK_SPACE):
+				getKeyState()[BUTTON1] = b;
+				break;
+			case (KeyEvent.VK_S):
+				getKeyState()[BUTTON2] = b;
+				break;
+			case (KeyEvent.VK_D):
+				getKeyState()[BUTTON3] = b;
+				break;
+			case (KeyEvent.VK_F):
+				getKeyState()[BUTTON4] = b;
+				break;
+			case (KeyEvent.VK_ENTER):
+				getKeyState()[ENTER] = b;
+				break;
+			case (KeyEvent.VK_ESCAPE):
+				getKeyState()[ESCAPE] = b;
+				break;
+		}
 	}
 
 	public static void update() {

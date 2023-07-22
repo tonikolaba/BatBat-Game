@@ -5,6 +5,7 @@ import al.tonikolaba.tilemap.TileMap;
 
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
+import java.util.Objects;
 import java.util.logging.Level;
 
 /**
@@ -22,7 +23,7 @@ public class Teleport extends MapObject {
         cwidth = 20;
         cheight = 40;
         try {
-            BufferedImage spritesheet = ImageIO.read(getClass().getResourceAsStream("/Sprites/Player/Teleport.gif"));
+            BufferedImage spritesheet = ImageIO.read(Objects.requireNonNull(getClass().getResourceAsStream("/Sprites/Player/Teleport.gif")));
             sprites = new BufferedImage[9];
             for (int i = 0; i < sprites.length; i++) {
                 sprites[i] = spritesheet.getSubimage(i * width, 0, width, height);

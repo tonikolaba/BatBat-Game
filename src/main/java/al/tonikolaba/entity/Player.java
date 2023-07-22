@@ -105,8 +105,8 @@ public class Player extends MapObject {
 
 		facingRight = true;
 
-		lives = 3;
-		health = maxHealth = 5;
+		lives = PlayerSave.getLives();
+		health = maxHealth = PlayerSave.getHeath();
 
 		// load sprites
 		try {
