@@ -43,7 +43,7 @@ public class Keys {
 			case (KeyEvent.VK_SPACE):
 				getKeyState()[BUTTON1] = b;
 				break;
-			case (KeyEvent.VK_S):
+			case (KeyEvent.VK_SHIFT):
 				getKeyState()[BUTTON2] = b;
 				break;
 			case (KeyEvent.VK_D):
