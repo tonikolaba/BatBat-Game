@@ -1,6 +1,7 @@
 package al.tonikolaba.audio;
 
 import java.util.HashMap;
+import java.util.Objects;
 import java.util.logging.Level;
 
 import javax.sound.sampled.AudioFormat;
@@ -32,13 +33,13 @@ public class JukeBox {
 	public static void load(String s, String n) {
 		// if (clips.get(s) != null)
 		// return;
-		Clip clip;
+		final Clip clip;
 		try {
-			AudioInputStream ais = AudioSystem.getAudioInputStream(JukeBox.class.getResourceAsStream(s));
-			AudioFormat baseFormat = ais.getFormat();
-			AudioFormat decodeFormat = new AudioFormat(AudioFormat.Encoding.PCM_SIGNED, baseFormat.getSampleRate(), 16,
+			final AudioInputStream ais = AudioSystem.getAudioInputStream(Objects.requireNonNull(JukeBox.class.getResourceAsStream(s)));
+			final AudioFormat baseFormat = ais.getFormat();
+			final AudioFormat decodeFormat = new AudioFormat(AudioFormat.Encoding.PCM_SIGNED, baseFormat.getSampleRate(), 16,
 					baseFormat.getChannels(), baseFormat.getChannels() * 2, baseFormat.getSampleRate(), false);
-			AudioInputStream dais = AudioSystem.getAudioInputStream(decodeFormat, ais);
+			final AudioInputStream dais = AudioSystem.getAudioInputStream(decodeFormat, ais);
 			clip = AudioSystem.getClip();
 			clip.open(dais);
 			clips.put(n, clip);

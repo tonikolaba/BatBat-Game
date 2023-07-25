@@ -7,6 +7,7 @@ import java.awt.Color;
 import java.awt.Font;
 import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
+import java.util.Objects;
 import java.util.logging.Level;
 
 import javax.imageio.ImageIO;
@@ -40,11 +41,11 @@ public abstract class BasicState {
 		this.gsm = gsm;
 		try {
 
-			bg = ImageIO.read(getClass().getResourceAsStream("/Backgrounds/sfondi1.gif")).getSubimage(0, 0,
+			bg = ImageIO.read(Objects.requireNonNull(getClass().getResourceAsStream("/Backgrounds/sfondi1.gif"))).getSubimage(0, 0,
 					GamePanel.WIDTH, GamePanel.HEIGHT);
 
 			// load floating head
-			head = ImageIO.read(getClass().getResourceAsStream("/HUD/Hud.gif")).getSubimage(0, 12, 12, 11);
+			head = ImageIO.read(Objects.requireNonNull(getClass().getResourceAsStream("/HUD/Hud.gif"))).getSubimage(0, 12, 12, 11);
 
 			// titles and fonts
 			fontMenu = new Font("Arial", Font.BOLD, 18);

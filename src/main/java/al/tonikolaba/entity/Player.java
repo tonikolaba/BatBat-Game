@@ -10,6 +10,7 @@ import java.util.logging.Level;
 import javax.imageio.ImageIO;
 
 import al.tonikolaba.audio.JukeBox;
+import al.tonikolaba.entity.enemies.Enemy;
 import al.tonikolaba.handlers.LoggingHelper;
 import al.tonikolaba.tilemap.TileMap;
 
@@ -105,8 +106,8 @@ public class Player extends MapObject {
 
 		facingRight = true;
 
-		lives = 3;
-		health = maxHealth = 5;
+		lives = PlayerSave.getLives();
+		health = maxHealth = PlayerSave.getHeath();
 
 		// load sprites
 		try {

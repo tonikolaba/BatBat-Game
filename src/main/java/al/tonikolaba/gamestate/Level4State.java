@@ -5,14 +5,14 @@ import java.awt.Rectangle;
 import java.util.ArrayList;
 
 import al.tonikolaba.audio.JukeBox;
-import al.tonikolaba.entity.Enemy;
+import al.tonikolaba.entity.enemies.Enemy;
 import al.tonikolaba.entity.EnergyParticle;
 import al.tonikolaba.entity.Explosion;
 import al.tonikolaba.entity.HUD;
 import al.tonikolaba.entity.Player;
 import al.tonikolaba.entity.PlayerSave;
 import al.tonikolaba.entity.Portal;
-import al.tonikolaba.entity.Spirit;
+import al.tonikolaba.entity.enemies.Spirit;
 import al.tonikolaba.entity.Teleport;
 import al.tonikolaba.entity.batbat.Piece;
 import al.tonikolaba.entity.enemies.RedEnergy;
@@ -68,16 +68,16 @@ public class Level4State extends GameState {
 		// player
 		player = new Player(tileMap);
 		player.setPosition(50, 190);
-		player.setHealth(PlayerSave.getHealth());
+		player.setHealth(PlayerSave.getHeath());
 		player.setLives(PlayerSave.getLives());
 		player.setTime(PlayerSave.getTime());
 
 		// player
-		player = new Player(tileMap);
-		player.setPosition(50, 190);
-		player.setHealth(PlayerSave.getHealth());
-		player.setLives(PlayerSave.getLives());
-		player.setTime(PlayerSave.getTime());
+//		player = new Player(tileMap);
+//		player.setPosition(50, 190);
+//		player.setHealth(PlayerSave.getHealth());
+//		player.setLives(PlayerSave.getLives());
+//		player.setTime(PlayerSave.getTime());
 
 		// explosions
 		explosions = new ArrayList<Explosion>();
@@ -341,7 +341,7 @@ public class Level4State extends GameState {
 			tb.get(0).height += 8;
 		}
 		if (eventCount == 60) {
-			PlayerSave.setHealth(player.getHealth());
+			PlayerSave.setHeath(player.getHealth());
 			PlayerSave.setLives(player.getLives());
 			PlayerSave.setTime(player.getTime());
 			gsm.setState(GameStateManager.ACIDSTATE);
