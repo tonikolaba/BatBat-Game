@@ -1,6 +1,5 @@
 package al.tonikolaba.entity.enemies;
 
-import al.tonikolaba.entity.Enemy;
 import al.tonikolaba.entity.Player;
 import al.tonikolaba.handlers.Content;
 import al.tonikolaba.tilemap.TileMap;

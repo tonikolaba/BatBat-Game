@@ -2,6 +2,7 @@ package al.tonikolaba.handlers;
 
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
+import java.util.Objects;
 import java.util.logging.Level;
 
 /**
@@ -25,16 +26,16 @@ public class Content {
         throw new IllegalStateException("Utility Class");
     }
 
-    public static BufferedImage[][] load(String s, int w, int h) {
-        BufferedImage[][] ret;
+    public static BufferedImage[][] load(final String s, final int w, final int h) {
         try {
-            BufferedImage spritesheet = ImageIO.read(Content.class.getResourceAsStream(s));
-            int width = spritesheet.getWidth() / w;
-            int height = spritesheet.getHeight() / h;
-            ret = new BufferedImage[height][width];
+            final BufferedImage spritesHeat = ImageIO.read(Objects.requireNonNull(Content.class.getResourceAsStream(s)));
+            final int width = spritesHeat.getWidth() / w;
+            final int height = spritesHeat.getHeight() / h;
+            final BufferedImage[][] ret = new BufferedImage[height][width];
+
             for (int i = 0; i < height; i++) {
                 for (int j = 0; j < width; j++) {
-                    ret[i][j] = spritesheet.getSubimage(j * w, i * h, w, h);
+                    ret[i][j] = spritesHeat.getSubimage(j * w, i * h, w, h);
                 }
             }
             return ret;

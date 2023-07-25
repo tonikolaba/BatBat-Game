@@ -7,8 +7,8 @@ import java.util.ArrayList;
 
 import al.tonikolaba.entity.EnergyParticle;
 import al.tonikolaba.entity.Player;
-import al.tonikolaba.entity.Spirit;
-import al.tonikolaba.entity.Enemy.EnemyType;
+import al.tonikolaba.entity.enemies.Spirit;
+import al.tonikolaba.entity.enemies.Enemy.EnemyType;
 import al.tonikolaba.entity.batbat.Piece;
 import al.tonikolaba.tilemap.Background;
 

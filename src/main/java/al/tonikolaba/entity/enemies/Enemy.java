@@ -1,6 +1,7 @@
-package al.tonikolaba.entity;
+package al.tonikolaba.entity.enemies;
 
 import al.tonikolaba.audio.JukeBox;
+import al.tonikolaba.entity.MapObject;
 import al.tonikolaba.tilemap.TileMap;
 
 /**

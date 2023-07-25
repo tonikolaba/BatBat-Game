@@ -1,13 +1,13 @@
-package al.tonikolaba.entity;
+package al.tonikolaba.entity.enemies;
 
-import java.awt.Graphics2D;
-import java.awt.image.BufferedImage;
-import java.util.ArrayList;
+import al.tonikolaba.entity.Explosion;
+import al.tonikolaba.entity.Player;
+import al.tonikolaba.tilemap.TileMap;
 
 import javax.imageio.ImageIO;
-
-import al.tonikolaba.entity.enemies.RedEnergy;
-import al.tonikolaba.tilemap.TileMap;
+import java.awt.*;
+import java.awt.image.BufferedImage;
+import java.util.ArrayList;
 
 /**
  * @author N. Kolaba

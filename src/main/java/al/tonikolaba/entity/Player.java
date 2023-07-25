@@ -10,6 +10,7 @@ import java.util.logging.Level;
 import javax.imageio.ImageIO;
 
 import al.tonikolaba.audio.JukeBox;
+import al.tonikolaba.entity.enemies.Enemy;
 import al.tonikolaba.handlers.LoggingHelper;
 import al.tonikolaba.tilemap.TileMap;
 

@@ -5,14 +5,14 @@ import java.awt.Rectangle;
 import java.util.ArrayList;
 
 import al.tonikolaba.audio.JukeBox;
-import al.tonikolaba.entity.Enemy;
+import al.tonikolaba.entity.enemies.Enemy;
 import al.tonikolaba.entity.EnergyParticle;
 import al.tonikolaba.entity.Explosion;
 import al.tonikolaba.entity.HUD;
 import al.tonikolaba.entity.Player;
 import al.tonikolaba.entity.PlayerSave;
 import al.tonikolaba.entity.Portal;
-import al.tonikolaba.entity.Spirit;
+import al.tonikolaba.entity.enemies.Spirit;
 import al.tonikolaba.entity.Teleport;
 import al.tonikolaba.entity.batbat.Piece;
 import al.tonikolaba.entity.enemies.RedEnergy;
